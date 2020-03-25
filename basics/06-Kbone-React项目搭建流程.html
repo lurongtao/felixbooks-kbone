@@ -1,0 +1,833 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>06-Kbone+React 项目手工搭建流程 · 千锋大前端小册-Electron</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="古艺散人">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../advanced/01-微信开放社区方案实现与应用效果.html" />
+    
+    
+    <link rel="prev" href="05-Kbone-Vue项目搭建流程.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"lurongtao","repo":"felixbooks-electron","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-Kbone简介.html">
+            
+                <a href="01-Kbone简介.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01-Kbone简介.html">
+            
+                <a href="01-Kbone简介.html">
+            
+                    
+                    01-Kbone介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02-快速开发.html">
+            
+                <a href="02-快速开发.html">
+            
+                    
+                    02-快速开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03-vue-todos-app.html">
+            
+                <a href="03-vue-todos-app.html">
+            
+                    
+                    03-Vue+Kbone 实现 Todos App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04-react-todos-app.html">
+            
+                <a href="04-react-todos-app.html">
+            
+                    
+                    04-React+Kbone 实现 Todos App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="05-Kbone-Vue项目搭建流程.html">
+            
+                <a href="05-Kbone-Vue项目搭建流程.html">
+            
+                    
+                    05-Kbone+Vue 项目手工搭建流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="06-Kbone-React项目搭建流程.html">
+            
+                <a href="06-Kbone-React项目搭建流程.html">
+            
+                    
+                    06-Kbone+React 项目手工搭建流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../advanced/01-微信开放社区方案实现与应用效果.html">
+            
+                <a href="../advanced/01-微信开放社区方案实现与应用效果.html">
+            
+                    
+                    原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../advanced/01-微信开放社区方案实现与应用效果.html">
+            
+                <a href="../advanced/01-微信开放社区方案实现与应用效果.html">
+            
+                    
+                    01-微信开放社区方案实现与应用效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../thanks/">
+            
+                <a href="../thanks/">
+            
+                    
+                    感谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >06-Kbone+React 项目手工搭建流程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#kbone--react-&#x9879;&#x76EE;&#x624B;&#x5DE5;&#x642D;&#x5EFA;&#x6D41;&#x7A0B;"><b></b>Kbone + React &#x9879;&#x76EE;&#x624B;&#x5DE5;&#x642D;&#x5EFA;&#x6D41;&#x7A0B;</a></li><ul><ul><li><span class="title-icon "></span><a href="#1&#x3001;&#x642D;&#x5EFA;-webpack-&#x73AF;&#x5883;"><b></b>1&#x3001;&#x642D;&#x5EFA; webpack &#x73AF;&#x5883;</a></li><li><span class="title-icon "></span><a href="#2&#x3001;&#x7F16;&#x5199;-webpack-&#x914D;&#x7F6E;"><b></b>2&#x3001;&#x7F16;&#x5199; webpack &#x914D;&#x7F6E;</a></li></ul></ul></ul></div><a href="#kbone--react-&#x9879;&#x76EE;&#x624B;&#x5DE5;&#x642D;&#x5EFA;&#x6D41;&#x7A0B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="kbone--react-&#x9879;&#x76EE;&#x624B;&#x5DE5;&#x642D;&#x5EFA;&#x6D41;&#x7A0B;"><a name="kbone--react-&#x9879;&#x76EE;&#x624B;&#x5DE5;&#x642D;&#x5EFA;&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#kbone--react-&#x9879;&#x76EE;&#x624B;&#x5DE5;&#x642D;&#x5EFA;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="kbone--react-&#x9879;&#x76EE;&#x624B;&#x5DE5;&#x642D;&#x5EFA;&#x6D41;&#x7A0B;" class="plugin-anchor" href="#kbone--react-&#x9879;&#x76EE;&#x624B;&#x5DE5;&#x642D;&#x5EFA;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>Kbone + React &#x9879;&#x76EE;&#x624B;&#x5DE5;&#x642D;&#x5EFA;&#x6D41;&#x7A0B;</h1>
+<p>&#x6B64;&#x65B9;&#x6848;&#x57FA;&#x4E8E; webpack &#x6784;&#x5EFA;&#x5B9E;&#x73B0;&#xFF0C;&#x6784;&#x5EFA; web &#x7AEF;&#x4EE3;&#x7801;&#x7684;&#x6D41;&#x7A0B;&#x65E0;&#x9700;&#x505A;&#x4EFB;&#x4F55;&#x8C03;&#x6574;&#xFF0C;&#x6B64;&#x5904;&#x53EA;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x5C06;&#x6E90;&#x7801;&#x6784;&#x5EFA;&#x6210;&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x4EE3;&#x7801;&#x3002;</p>
+<h3 id="1&#x3001;&#x642D;&#x5EFA;-webpack-&#x73AF;&#x5883;"><a name="1&#x3001;&#x642D;&#x5EFA;-webpack-&#x73AF;&#x5883;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x642D;&#x5EFA;-webpack-&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#x3001;&#x642D;&#x5EFA;-webpack-&#x73AF;&#x5883;" class="plugin-anchor" href="#1&#x3001;&#x642D;&#x5EFA;-webpack-&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x642D;&#x5EFA; webpack &#x73AF;&#x5883;</h3>
+<p>&#x5728;&#x672C;&#x5730;&#x624B;&#x5DE5;&#x642D;&#x5EFA;&#x4E00;&#x4E2A; webpack &#x73AF;&#x5883;&#x3002;&#x5728;&#x4EFB;&#x610F;&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>// &#x521B;&#x5EFA;&#x9879;&#x76EE;&#x76EE;&#x5F55;
+mkdir kbone-react-project
+
+// &#x751F;&#x6210; Node &#x5305;&#x7BA1;&#x7406;&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+cd kbone-react-project
+npm init -y
+
+// &#x5B89;&#x88C5; webpack, webpack-cli
+npm install webpack webpack-cli --save-dev
+</code></pre><h3 id="2&#x3001;&#x7F16;&#x5199;-webpack-&#x914D;&#x7F6E;"><a name="2&#x3001;&#x7F16;&#x5199;-webpack-&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x7F16;&#x5199;-webpack-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#x3001;&#x7F16;&#x5199;-webpack-&#x914D;&#x7F6E;" class="plugin-anchor" href="#2&#x3001;&#x7F16;&#x5199;-webpack-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x7F16;&#x5199; webpack &#x914D;&#x7F6E;</h3>
+<h4 id="21-webpackmpconfigjs"><a name="21-webpackmpconfigjs" class="anchor-navigation-ex-anchor" href="#21-webpackmpconfigjs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="21-webpackmpconfigjs" class="plugin-anchor" href="#21-webpackmpconfigjs"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 webpack.mp.config.js</h4>
+<p>&#x5728;&#x9879;&#x76EE;&#x8DDF;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5939; build&#xFF0C;&#x5728; build &#x4E0B;&#x9762;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A; webpack.mp.config.js &#x6587;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x4EE3;&#x7801;&#x7684;&#x6784;&#x5EFA;&#xFF0C;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+<span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>)
+<span class="hljs-keyword">const</span> MiniCssExtractPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mini-css-extract-plugin&apos;</span>)
+<span class="hljs-keyword">const</span> OptimizeCSSAssetsPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;optimize-css-assets-webpack-plugin&apos;</span>)
+<span class="hljs-keyword">const</span> TerserPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;terser-webpack-plugin&apos;</span>)
+<span class="hljs-keyword">const</span> MpPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mp-webpack-plugin&apos;</span>)
+
+<span class="hljs-keyword">const</span> isOptimize = <span class="hljs-literal">true</span> <span class="hljs-comment">// &#x662F;&#x5426;&#x538B;&#x7F29;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x5B8C;&#x7F8E;&#x652F;&#x6301;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x4F7F;&#x7528;&#x5230;&#x7684; es &#x7279;&#x6027;&#xFF0C;&#x5EFA;&#x8BAE;&#x81EA;&#x5DF1;&#x505A;&#x4EE3;&#x7801;&#x538B;&#x7F29;</span>
+
+<span class="hljs-built_in">module</span>.exports = {
+  mode: <span class="hljs-string">&apos;production&apos;</span>,
+  entry: {
+    index: path.resolve(__dirname, <span class="hljs-string">&apos;../src/main.mp.jsx&apos;</span>)
+  },
+  output: {
+    path: path.resolve(__dirname, <span class="hljs-string">&apos;../dist/mp/common&apos;</span>), <span class="hljs-comment">// &#x653E;&#x5230;&#x5C0F;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x76EE;&#x5F55;&#x4E2D;&#x7684; common &#x76EE;&#x5F55;&#x4E0B;</span>
+    filename: <span class="hljs-string">&apos;[name].js&apos;</span>, <span class="hljs-comment">// &#x5FC5;&#x9700;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</span>
+    library: <span class="hljs-string">&apos;createApp&apos;</span>, <span class="hljs-comment">// &#x5FC5;&#x9700;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</span>
+    libraryExport: <span class="hljs-string">&apos;default&apos;</span>, <span class="hljs-comment">// &#x5FC5;&#x9700;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</span>
+    libraryTarget: <span class="hljs-string">&apos;window&apos;</span>, <span class="hljs-comment">// &#x5FC5;&#x9700;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</span>
+  },
+  target: <span class="hljs-string">&apos;web&apos;</span>, <span class="hljs-comment">// &#x5FC5;&#x9700;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</span>
+  optimization: {
+    runtimeChunk: <span class="hljs-literal">false</span>, <span class="hljs-comment">// &#x5FC5;&#x9700;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</span>
+    splitChunks: { <span class="hljs-comment">// &#x4EE3;&#x7801;&#x5206;&#x9694;&#x914D;&#x7F6E;&#xFF0C;&#x4E0D;&#x5EFA;&#x8BAE;&#x4FEE;&#x6539;</span>
+      chunks: <span class="hljs-string">&apos;all&apos;</span>,
+      minSize: <span class="hljs-number">1000</span>,
+      maxSize: <span class="hljs-number">0</span>,
+      minChunks: <span class="hljs-number">1</span>,
+      maxAsyncRequests: <span class="hljs-number">100</span>,
+      maxInitialRequests: <span class="hljs-number">100</span>,
+      automaticNameDelimiter: <span class="hljs-string">&apos;~&apos;</span>,
+      name: <span class="hljs-literal">true</span>,
+      cacheGroups: {
+        vendors: {
+          test: <span class="hljs-regexp">/[\\/]node_modules[\\/]/</span>,
+          priority: <span class="hljs-number">-10</span>
+        },
+        <span class="hljs-keyword">default</span>: {
+          minChunks: <span class="hljs-number">2</span>,
+          priority: <span class="hljs-number">-20</span>,
+          reuseExistingChunk: <span class="hljs-literal">true</span>
+        }
+      }
+    },
+
+    minimizer: isOptimize ? [
+      <span class="hljs-comment">// &#x538B;&#x7F29;CSS</span>
+      <span class="hljs-keyword">new</span> OptimizeCSSAssetsPlugin({
+        assetNameRegExp: <span class="hljs-regexp">/\.(css|wxss)$/g</span>,
+        cssProcessor: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cssnano&apos;</span>),
+        cssProcessorPluginOptions: {
+          preset: [<span class="hljs-string">&apos;default&apos;</span>, {
+            discardComments: {
+              removeAll: <span class="hljs-literal">true</span>,
+            },
+            minifySelectors: <span class="hljs-literal">false</span>, <span class="hljs-comment">// &#x56E0;&#x4E3A; wxss &#x7F16;&#x8BD1;&#x5668;&#x4E0D;&#x652F;&#x6301; .some&gt;:first-child &#x8FD9;&#x6837;&#x683C;&#x5F0F;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6240;&#x4EE5;&#x6682;&#x65F6;&#x7981;&#x6389;&#x8FD9;&#x4E2A;</span>
+          }],
+        },
+        canPrint: <span class="hljs-literal">false</span>
+      }),
+      <span class="hljs-comment">// &#x538B;&#x7F29; js</span>
+      <span class="hljs-keyword">new</span> TerserPlugin({
+        test: <span class="hljs-regexp">/\.js(\?.*)?$/i</span>,
+        parallel: <span class="hljs-literal">true</span>,
+      })
+    ] : [],
+  },
+  <span class="hljs-built_in">module</span>: {
+    rules: [{
+      test: <span class="hljs-regexp">/\.css$/</span>,
+      use: [
+        MiniCssExtractPlugin.loader,
+        <span class="hljs-string">&apos;css-loader&apos;</span>,
+      ],
+    }, {
+      test: <span class="hljs-regexp">/\.[t|j]sx?$/</span>,
+      loader: <span class="hljs-string">&apos;babel-loader&apos;</span>,
+      exclude: <span class="hljs-regexp">/node_modules/</span>,
+      options: {
+        presets: [
+          <span class="hljs-string">&quot;env&quot;</span>,
+          <span class="hljs-string">&quot;stage-3&quot;</span>,
+          <span class="hljs-string">&quot;react&quot;</span>
+        ],
+        <span class="hljs-string">&quot;plugins&quot;</span>: [
+            <span class="hljs-string">&quot;transform-runtime&quot;</span>
+        ]
+      }
+    }, {
+      test: <span class="hljs-regexp">/\.(png|jpg|gif|svg)$/</span>,
+      loader: <span class="hljs-string">&apos;file-loader&apos;</span>,
+      options: {
+        name: <span class="hljs-string">&apos;[name].[ext]?[hash]&apos;</span>,
+      },
+    }]
+  },
+  resolve: {
+    extensions: [<span class="hljs-string">&apos;*&apos;</span>, <span class="hljs-string">&apos;.js&apos;</span>, <span class="hljs-string">&apos;.jsx&apos;</span>, <span class="hljs-string">&apos;.json&apos;</span>]
+  },
+  plugins: [
+    <span class="hljs-keyword">new</span> webpack.DefinePlugin({
+      <span class="hljs-string">&apos;process.env.isMiniprogram&apos;</span>: process.env.isMiniprogram, <span class="hljs-comment">// &#x6CE8;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x7528;&#x4E8E;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x5224;&#x65AD;</span>
+    }),
+    <span class="hljs-keyword">new</span> MiniCssExtractPlugin({
+      filename: <span class="hljs-string">&apos;[name].wxss&apos;</span>,
+    }),
+    <span class="hljs-keyword">new</span> MpPlugin(<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./miniprogram.config&apos;</span>))
+  ],
+}
+</code></pre>
+<h4 id="22-&#x5B89;&#x88C5;&#x4F9D;&#x8D56;"><a name="22-&#x5B89;&#x88C5;&#x4F9D;&#x8D56;" class="anchor-navigation-ex-anchor" href="#22-&#x5B89;&#x88C5;&#x4F9D;&#x8D56;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="22-&#x5B89;&#x88C5;&#x4F9D;&#x8D56;" class="plugin-anchor" href="#22-&#x5B89;&#x88C5;&#x4F9D;&#x8D56;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 &#x5B89;&#x88C5;&#x4F9D;&#x8D56;</h4>
+<p>&#x5B89;&#x88C5;&#x4E0A;&#x8FF0;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x7684; loader &#x548C; plugin &#x4F9D;&#x8D56;&#xFF1A;</p>
+<pre><code>npm install babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/plugin-transform-runtime @babel/runtime css-loader file-loader mini-css-extract-plugin optimize-css-assets-webpack-plugin terser-webpack-plugin mp-webpack-plugin --save-dev
+</code></pre><h4 id="23-&#x7F16;&#x5199;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;"><a name="23-&#x7F16;&#x5199;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#23-&#x7F16;&#x5199;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="23-&#x7F16;&#x5199;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;" class="plugin-anchor" href="#23-&#x7F16;&#x5199;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 &#x7F16;&#x5199; webpack &#x63D2;&#x4EF6;&#x914D;&#x7F6E;</h4>
+<p>&#x8FD9;&#x91CC;&#x7684; webpack &#x63D2;&#x4EF6;&#x914D;&#x7F6E;&#x5373; MpPlugin &#x7684;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x6587;&#x4EF6;&#x3002;&#x5728; build &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA; miniprogram.config.js &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-comment">// &#x9875;&#x9762; origin&#xFF0C;&#x9ED8;&#x8BA4;&#x662F; https://miniprogram.default</span>
+  origin: <span class="hljs-string">&apos;https://test.miniprogram.com&apos;</span>,
+
+  <span class="hljs-comment">// &#x5165;&#x53E3;&#x9875;&#x9762;&#x8DEF;&#x7531;</span>
+  entry: <span class="hljs-string">&apos;/view1&apos;</span>,
+
+  <span class="hljs-comment">// &#x9875;&#x9762;&#x8DEF;&#x7531;&#xFF0C;&#x7528;&#x4E8E;&#x9875;&#x9762;&#x95F4;&#x8DF3;&#x8F6C;&#x3002;&#x5176;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x4EE5;&#x9875;&#x9762;&#x540D;&#x79F0;&#x4F5C;&#x4E3A; key &#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6BCF;&#x9879;&#x7684;&#x503C;&#x662F;&#x8BE5;&#x9875;&#x9762;&#x53EF;&#x4EE5;&#x54CD;&#x5E94;&#x7684;&#x8DEF;&#x7531;</span>
+    router: {
+        index: [<span class="hljs-string">&apos;/view1&apos;</span>, <span class="hljs-string">&apos;/view2&apos;</span>],
+  },
+
+  <span class="hljs-comment">// &#x7279;&#x6B8A;&#x8DEF;&#x7531;&#x8DF3;&#x8F6C;</span>
+    redirect: {    
+        notFound: <span class="hljs-string">&apos;index&apos;</span>,    
+        accessDenied: <span class="hljs-string">&apos;index&apos;</span>,
+  },
+
+  <span class="hljs-comment">// &#x6784;&#x5EFA;&#x8F93;&#x51FA;&#x914D;&#x7F6E;</span>
+    generate: {
+    <span class="hljs-comment">// &#x6784;&#x5EFA;&#x5B8C;&#x6210;&#x540E;&#x662F;&#x5426;&#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x5C0F;&#x7A0B;&#x5E8F;&#x4F9D;&#x8D56;&#x3002;&apos;npm&apos;&#xFF1A;&#x4F7F;&#x7528; npm &#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;</span>
+        autoBuildNpm: <span class="hljs-string">&apos;npm&apos;</span>
+  },
+
+  <span class="hljs-comment">// &#x5C0F;&#x7A0B;&#x5E8F;&#x5168;&#x5C40;&#x914D;&#x7F6E;&#xFF0C;&#x53C2;&#x89C1; https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#window</span>
+    app: {
+        navigationBarTitleText: <span class="hljs-string">&apos;miniprogram-project&apos;</span>,
+  },
+
+  <span class="hljs-comment">// &#x6240;&#x6709;&#x9875;&#x9762;&#x7684;&#x5168;&#x5C40;&#x914D;&#x7F6E;</span>
+    global: {
+        rem: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x652F;&#x6301; rem</span>
+    pageStyle: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x652F;&#x6301;&#x4FEE;&#x6539;&#x9875;&#x9762;&#x6837;&#x5F0F;</span>
+  },
+
+  <span class="hljs-comment">// &#x9879;&#x76EE;&#x914D;&#x7F6E;&#xFF0C;&#x4F1A;&#x88AB;&#x5408;&#x5E76;&#x5230; project.config.json &#x4E2D;</span>
+    projectConfig: {
+        appid: <span class="hljs-string">&apos;&apos;</span>,
+    projectname: <span class="hljs-string">&apos;kbone-react-project&apos;</span>,
+  },
+
+  <span class="hljs-comment">// &#x5305;&#x914D;&#x7F6E;&#xFF0C;&#x4F1A;&#x88AB;&#x5408;&#x5E76;&#x5230; package.json &#x4E2D;</span>
+    packageConfig: {
+        author: <span class="hljs-string">&apos;wechat-miniprogram&apos;</span>,
+    }
+}
+</code></pre>
+<h4 id="24-&#x65B0;&#x589E;&#x5165;&#x53E3;&#x6587;&#x4EF6;"><a name="24-&#x65B0;&#x589E;&#x5165;&#x53E3;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#24-&#x65B0;&#x589E;&#x5165;&#x53E3;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="24-&#x65B0;&#x589E;&#x5165;&#x53E3;&#x6587;&#x4EF6;" class="plugin-anchor" href="#24-&#x65B0;&#x589E;&#x5165;&#x53E3;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 &#x65B0;&#x589E;&#x5165;&#x53E3;&#x6587;&#x4EF6;</h4>
+<p><strong>1&#x3001;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>src</code> &#x76EE;&#x5F55;&#xFF0C;&#x5728; <code>src</code> &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>main.mp.jsx</code>&#x6587;&#x4EF6;&#xFF1A;</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> {render, h} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./App&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createApp</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;div&apos;</span>)
+  container.id = <span class="hljs-string">&apos;app&apos;</span>
+  <span class="hljs-built_in">document</span>.body.appendChild(container)
+
+  render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>, container)
+}
+</span></code></pre>
+<p><strong>2&#x3001;&#x5B89;&#x88C5; React React-dom</strong></p>
+<pre><code>npm install react react-dom
+</code></pre><h4 id="25-&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x6587;&#x4EF6;"><a name="25-&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#25-&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="25-&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x6587;&#x4EF6;" class="plugin-anchor" href="#25-&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5 &#x6784;&#x5EFA;&#x9879;&#x76EE;&#x6587;&#x4EF6;</h4>
+<p><strong>1&#x3001;&#x521B;&#x5EFA;App.jsx</strong></p>
+<p>&#x5728; <code>src</code> &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>App.jsx</code> &#x6587;&#x4EF6;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#xFF1A;</p>
+<ul>
+<li>&#x8DEF;&#x7531;&#x7EC4;&#x4EF6;&#x7684;&#x5C55;&#x793A;&#x548C;&#x8DEF;&#x7531;&#x5207;&#x6362;</li>
+<li>&#x8868;&#x5355;&#x7EC4;&#x4EF6;&#x5C55;&#x793A;&#xFF1A;&#x8F93;&#x5165;&#x6846;&#x3001;checkbox&#x3001;radio&#x3001;picker-view</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, {useState} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> {render, h} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>
+<span class="hljs-keyword">import</span> {BrowserRouter <span class="hljs-keyword">as</span> Router, Switch, Route, Link} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-router-dom&apos;</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./app.css&apos;</span>
+
+<span class="hljs-keyword">import</span> PickerView <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./PickerView.jsx&apos;</span>
+<span class="hljs-keyword">import</span> View1 <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./View1&apos;</span>
+<span class="hljs-keyword">import</span> View2 <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./View2&apos;</span>
+<span class="hljs-keyword">import</span> View3 <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./View3&apos;</span>
+
+<span class="hljs-keyword">const</span> App = (props, store) =&gt; {
+  <span class="hljs-keyword">return</span> (
+    &lt;div&gt;
+      &lt;div&gt;
+        &#x6211;&#x662F;&#x8F93;&#x5165;&#x6846;&#xFF1A;
+        &lt;input
+          onClick={e =&gt; console.log(&apos;click&apos;, e)}
+          onInput={e =&gt; console.log(&apos;input&apos;, e)}
+          onFocus={e =&gt; console.log(&apos;focus&apos;, e)}
+          onBlur={e =&gt; console.log(&apos;blur&apos;, e)}
+          onChange={e =&gt; console.log(&apos;change&apos;, e)}
+        /&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &#x6211;&#x662F; checkbox&#xFF1A;
+        &lt;input
+          type=&quot;checkbox&quot;
+          onChange={e =&gt; console.log(&apos;change&apos;, e)}
+        /&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &#x6211;&#x662F; radio&#xFF1A;
+        &lt;input
+          type=&quot;radio&quot;
+          name=&quot;radio&quot;
+          value=&quot;1&quot;
+          onChange={e =&gt; console.log(&apos;change&apos;, e)}
+        /&gt;
+        &lt;input
+          type=&quot;radio&quot;
+          name=&quot;radio&quot;
+          value=&quot;2&quot;
+          onChange={e =&gt; console.log(&apos;change&apos;, e)}
+        /&gt;
+      &lt;/div&gt;
+      &lt;div&gt;
+        &#x6211;&#x662F; picker-view&#xFF1A;
+        &lt;PickerView&gt;&lt;/PickerView&gt;
+      &lt;/div&gt;
+      &lt;Router&gt;
+        &lt;div&gt;react-router&lt;/div&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;Link to=&quot;/view1&quot;&gt;view1&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;Link to=&quot;/view2&quot;&gt;view2&lt;/Link&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;Link to=&quot;/view3&quot;&gt;view3&lt;/Link&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;Switch&gt;
+          &lt;Route path=&quot;/view1&quot; component={View1}&gt;&lt;/Route&gt;
+          &lt;Route path=&quot;/view2&quot; component={View2}&gt;&lt;/Route&gt;
+          &lt;Route path=&quot;/:view&quot; component={View3}&gt;&lt;/Route&gt;
+        &lt;/Switch&gt;
+      &lt;/Router&gt;
+    &lt;/div&gt;
+  )
+}
+
+export default App
+</code></pre>
+<p><strong>2&#x3001;&#x5B89;&#x88C5; react-router-dom &#x4F9D;&#x8D56;&#x5305;</strong></p>
+<pre><code>npm install react-router-dom
+</code></pre><p><strong>3&#x3001;&#x521B;&#x5EFA; PickerView &#x7EC4;&#x4EF6;</strong></p>
+<p>&#x5728; <code>src</code> &#x4E0B;&#x91CC;&#x521B;&#x5EFA; <code>PickerView.jsx</code> &#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PickerView</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  <span class="hljs-keyword">constructor</span>(props) {
+    <span class="hljs-keyword">super</span>(props)
+    <span class="hljs-keyword">this</span>.pickerView = React.createRef()
+    <span class="hljs-keyword">this</span>.state = {
+      value: [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>],
+    }
+    <span class="hljs-keyword">this</span>.onChange = evt =&gt; {
+      <span class="hljs-built_in">console</span>.log(evt.detail.value)
+      <span class="hljs-keyword">this</span>.setState({
+        value: evt.detail.value,
+      })
+    }
+  }
+
+  componentDidMount() {
+    <span class="hljs-keyword">this</span>.pickerView.current.addEventListener(<span class="hljs-string">&apos;change&apos;</span>, <span class="hljs-keyword">this</span>.onChange)
+  }
+
+  componentWillUnmount() {
+    <span class="hljs-keyword">this</span>.pickerView.current.removeEventListener(<span class="hljs-string">&apos;change&apos;</span>, <span class="hljs-keyword">this</span>.onChange)
+  }
+
+  render() {
+    <span class="hljs-keyword">return</span> (
+      &lt;wx-picker-view 
+        ref={this.pickerView} 
+        style={{width: &apos;100%&apos;, height: &apos;300px&apos;}} 
+        value={this.state.value}
+      &gt;
+        &lt;wx-picker-view-column&gt;
+          &lt;div&gt;&#x6625;&lt;/div&gt;
+          &lt;div&gt;&#x590F;&lt;/div&gt;
+          &lt;div&gt;&#x79CB;&lt;/div&gt;
+          &lt;div&gt;&#x51AC;&lt;/div&gt;
+        &lt;/wx-picker-view-column&gt;
+        &lt;wx-picker-view-column&gt;
+          &lt;div&gt;2011&lt;/div&gt;
+          &lt;div&gt;2012&lt;/div&gt;
+          &lt;div&gt;2013&lt;/div&gt;
+          &lt;div&gt;2014&lt;/div&gt;
+          &lt;div&gt;2015&lt;/div&gt;
+          &lt;div&gt;2016&lt;/div&gt;
+          &lt;div&gt;2017&lt;/div&gt;
+          &lt;div&gt;2018&lt;/div&gt;
+        &lt;/wx-picker-view-column&gt;
+      &lt;/wx-picker-view&gt;
+    )
+  }
+}
+
+export default PickerView
+</code></pre>
+<p><strong>4&#x3001;&#x521B;&#x5EFA; View1 &#x7EC4;&#x4EF6;</strong></p>
+<p>&#x5728; <code>src</code> &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>View1.jsx</code> &#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">View1</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I am view1<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>route: {this.props.match.path}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> View1
+</code></pre>
+<p><strong>5&#x3001;&#x521B;&#x5EFA; View2 &#x7EC4;&#x4EF6;</strong></p>
+<p>&#x5728; <code>src</code> &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>View2.jsx</code> &#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">View2</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I am view2<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>route: {this.props.match.path}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> View2
+</code></pre>
+<p><strong>6&#x3001;&#x521B;&#x5EFA; View3 &#x7EC4;&#x4EF6;</strong></p>
+<p>&#x5728; <code>src</code> &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>View3.jsx</code> &#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">View3</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I am view3<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>route: {this.props.match.path}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> View3
+</code></pre>
+<h4 id="26-&#x6267;&#x884C;&#x6784;&#x5EFA;"><a name="26-&#x6267;&#x884C;&#x6784;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#26-&#x6267;&#x884C;&#x6784;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="26-&#x6267;&#x884C;&#x6784;&#x5EFA;" class="plugin-anchor" href="#26-&#x6267;&#x884C;&#x6784;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>2.6 &#x6267;&#x884C;&#x6784;&#x5EFA;</h4>
+<p><strong>1&#x3001;&#x5B89;&#x88C5; cross-env</strong></p>
+<p><strong>&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;cross-env&#xFF1F;</strong></p>
+<p>cross-env &#x662F;&#x8FD0;&#x884C;&#x8DE8;&#x5E73;&#x53F0;&#x8BBE;&#x7F6E;&#x548C;&#x4F7F;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x811A;&#x672C;&#x3002;</p>
+<p>&#x5F53;&#x60A8;&#x4F7F;&#x7528;NODE_ENV=production, &#x6765;&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x5927;&#x591A;&#x6570;Windows&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x5C06;&#x4F1A;&#x963B;&#x585E;(&#x62A5;&#x9519;)&#x3002;</p>
+<p>cross-env&#x4F7F;&#x5F97;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5355;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x800C;&#x4E0D;&#x5FC5;&#x62C5;&#x5FC3;&#x4E3A;&#x5E73;&#x53F0;&#x6B63;&#x786E;&#x8BBE;&#x7F6E;&#x6216;&#x4F7F;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;&#x8FD9;&#x4E2A;&#x8FF7;&#x4F60;&#x7684;&#x5305;(cross-env)&#x80FD;&#x591F;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;scripts&#xFF0C;&#x8BA9;&#x4F60;&#x80FD;&#x591F;&#x4EE5;unix&#x65B9;&#x5F0F;&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x5728;windows&#x4E0A;&#x4E5F;&#x80FD;&#x517C;&#x5BB9;&#x8FD0;&#x884C;&#x3002;</p>
+<p><strong>&#x5B89;&#x88C5;&#xFF1A;</strong></p>
+<pre><code>npm install cross-env --save-dev
+</code></pre><p><strong>2&#x3001;&#x7F16;&#x5199; npm &#x811A;&#x672C;</strong></p>
+<p><code>NODE_ENV</code> &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x5C06;&#x7531; <code>cross-env</code> &#x8BBE;&#x7F6E;&#x3002;&#x6253;&#x5370; <code>process.env.NODE_ENV</code> &#x503C;&#x4E3A; &apos;production&apos;&#x3002;</p>
+<pre><code class="lang-json"><span class="hljs-string">&quot;scripts&quot;</span>: {
+  <span class="hljs-string">&quot;mp&quot;</span>: <span class="hljs-string">&quot;cross-env NODE_ENV=production webpack --config build/webpack.mp.config.js --progress --hide-modules&quot;</span>
+}
+</code></pre>
+<h4 id="27-&#x9879;&#x76EE;&#x6548;&#x679C;&#x9884;&#x89C8;"><a name="27-&#x9879;&#x76EE;&#x6548;&#x679C;&#x9884;&#x89C8;" class="anchor-navigation-ex-anchor" href="#27-&#x9879;&#x76EE;&#x6548;&#x679C;&#x9884;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="27-&#x9879;&#x76EE;&#x6548;&#x679C;&#x9884;&#x89C8;" class="plugin-anchor" href="#27-&#x9879;&#x76EE;&#x6548;&#x679C;&#x9884;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a>2.7 &#x9879;&#x76EE;&#x6548;&#x679C;&#x9884;&#x89C8;</h4>
+<p><strong>&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</strong></p>
+<pre><code>npm run mp
+</code></pre><p><strong>&#x9884;&#x89C8;&#x6548;&#x679C;&#xFF1A;</strong></p>
+<p>&#x4F7F;&#x7528;&#x5FAE;&#x4FE1;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x5BFC;&#x5165;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B; <code>dist</code> &#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x9879;&#x76EE; <code>mp</code>&#xFF0C;&#x76F4;&#x63A5;&#x9009;&#x62E9; <code>mp</code> &#x6587;&#x4EF6;&#x5939;&#x5373;&#x53EF;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="images/Snip20200325_185.png" width="600"></p>
+<p>&#x9879;&#x76EE;&#x8FD0;&#x884C;&#x6548;&#x679C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="images/Snip20200325_186.png" width="400"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05-Kbone-Vue项目搭建流程.html" class="navigation navigation-prev " aria-label="Previous page: 05-Kbone+Vue 项目手工搭建流程">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../advanced/01-微信开放社区方案实现与应用效果.html" class="navigation navigation-next " aria-label="Next page: 原理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"06-Kbone+React 项目手工搭建流程","level":"1.2.6","depth":2,"next":{"title":"原理","level":"1.3","depth":1,"path":"advanced/01-微信开放社区方案实现与应用效果.md","ref":"./advanced/01-微信开放社区方案实现与应用效果.md","articles":[{"title":"01-微信开放社区方案实现与应用效果","level":"1.3.1","depth":2,"path":"advanced/01-微信开放社区方案实现与应用效果.md","ref":"./advanced/01-微信开放社区方案实现与应用效果.md","articles":[]}]},"previous":{"title":"05-Kbone+Vue 项目手工搭建流程","level":"1.2.5","depth":2,"path":"basics/05-Kbone-Vue项目搭建流程.md","ref":"./basics/05-Kbone-Vue项目搭建流程.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex","favicon","insert-logo"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/lurongtao/felixbooks-electron"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"lurongtao","repo":"felixbooks-electron","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"url":"/felixbooks-electron/images/logo.png","style":"background: skyblue; width: 100%; height: 100%;"}},"theme":"default","author":"古艺散人","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"千锋大前端小册-Electron","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"Electron 入门与实战"},"file":{"path":"basics/06-Kbone-React项目搭建流程.md","mtime":"2020-03-25T06:33:57.117Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-25T06:41:45.156Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
