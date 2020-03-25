@@ -198,9 +198,9 @@ module.exports = {
 }
 ```
 
-#### 2.4 新增入口文件
+### 3、新增入口文件
 
-**1、在项目根目录下创建 `src` 目录，在 `src` 目录下创建 `main.mp.jsx`文件：**
+**3.1 在项目根目录下创建 `src` 目录，在 `src` 目录下创建 `main.mp.jsx`文件：**
 
 ```js
 import React from 'react'
@@ -216,15 +216,15 @@ export default function createApp() {
 }
 ```
 
-**2、安装 React React-dom**
+**3.2 安装 React React-dom**
 
 ```
 npm install react react-dom
 ```
 
-#### 2.5 构建项目文件
+### 4、构建项目文件
 
-**1、创建App.jsx**
+**4.1 创建App.jsx**
 
 在 `src` 目录下创建 `App.jsx` 文件，实现了：
 
@@ -301,13 +301,13 @@ const App = (props, store) => {
 export default App
 ```
 
-**2、安装 react-router-dom 依赖包**
+**4.2 安装 react-router-dom 依赖包**
 
 ```
 npm install react-router-dom
 ```
 
-**3、创建 PickerView 组件**
+**4.3 创建 PickerView 组件**
 
 在 `src` 下里创建 `PickerView.jsx` 组件：
 
@@ -368,7 +368,7 @@ class PickerView extends React.Component {
 export default PickerView
 ```
 
-**4、创建 View1 组件**
+**4.4 创建 View1 组件**
 
 在 `src` 目录下创建 `View1.jsx` 组件：
 
@@ -389,7 +389,7 @@ class View1 extends React.Component {
 export default View1
 ```
 
-**5、创建 View2 组件**
+**4.5 创建 View2 组件**
 
 在 `src` 目录下创建 `View2.jsx` 组件：
 
@@ -410,7 +410,7 @@ class View2 extends React.Component {
 export default View2
 ```
 
-**6、创建 View3 组件**
+**4.6 创建 View3 组件**
 
 在 `src` 目录下创建 `View3.jsx` 组件：
 
@@ -431,9 +431,9 @@ class View3 extends React.Component {
 export default View3
 ```
 
-#### 2.6 执行构建
+### 5、执行构建
 
-**1、安装 cross-env**
+**5.1 安装 cross-env**
 
 **为什么使用cross-env？**
 
@@ -449,7 +449,7 @@ cross-env使得您可以使用单个命令，而不必担心为平台正确设�
 npm install cross-env --save-dev
 ```
 
-**2、编写 npm 脚本**
+**5.2 编写 npm 脚本**
 
 `NODE_ENV` 环境变量将由 `cross-env` 设置。打印 `process.env.NODE_ENV` 值为 'production'。
 
@@ -459,15 +459,15 @@ npm install cross-env --save-dev
 }
 ```
 
-#### 2.7 项目效果预览
+### 6、项目效果预览
 
-**执行如下命令：**
+**6.1 执行命令：**
 
 ```
 npm run mp
 ```
 
-**预览效果：**
+**6.2 预览效果：**
 
 使用微信开发者工具导入项目根目录下 `dist` 目录下的项目 `mp`，直接选择 `mp` 文件夹即可，如下图所示：
 

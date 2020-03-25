@@ -29,7 +29,7 @@ ReactDOM.render(<Todos />, document.getElementById('root'));
 // ...
 ```
 
-### 2.2 编写 Todos.css
+#### 2.2 编写 Todos.css
 
 在项目目录 `react-todos/src` 下创建 `Todos.css`：
 
