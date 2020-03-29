@@ -27,12 +27,12 @@
   ],
   "pluginsConfig": {
     "github": {
-      "url": "https://github.com/lurongtao/felixbooks-electron"
+      "url": "https://github.com/lurongtao/felixbooks-kbone"
     },
     "github-buttons": {
       "buttons": [{
         "user": "lurongtao",
-        "repo": "felixbooks-electron",
+        "repo": "felixbooks-kbone",
         "type": "star",
         "size": "small",
         "count": true
@@ -74,7 +74,7 @@
       }
     },
     "insert-logo": {
-      "url": "/felixbooks-electron/images/logo.png",
+      "url": "/felixbooks-electron/images/logo-kbone.png",
       "style": "background: skyblue; width: 100%; height: 100%;"
     }
   }
