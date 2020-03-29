@@ -10,7 +10,11 @@
   - [05-Kbone+Vue 项目手工搭建流程](./basics/05-Kbone-Vue项目搭建流程.md)
   - [06-Kbone+React 项目手工搭建流程](./basics/06-Kbone-React项目搭建流程.md)
 
-- [原理](./advanced/01-微信开放社区方案实现与应用效果.md)
-  - [01-微信开放社区方案实现与应用效果](./advanced/01-微信开放社区方案实现与应用效果.md)
+- [高级](./advanced/README.md)
+  - [01-环境判断](./advanced/01-环境判断.md)
+  - [02-多页开发](./advanced/02-多页开发.md)
+
+- [原理](./architect/01-微信开放社区方案实现与应用效果.md)
+  - [01-微信开放社区方案实现与应用效果](./architect/01-微信开放社区方案实现与应用效果.md)
 
 - [感谢](thanks/README.md)

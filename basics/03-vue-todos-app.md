@@ -370,9 +370,25 @@ new Vue({
 
 拷贝 `Todos.vue` 到 `kbone-vue` 项目的 `src` 根目录下。
 
-#### 3.3 拷贝todos.mp.js
+#### 3.3 编写 todos.mp.js
 
-拷贝 `todos.mp.js` 到 `kbone-vue` 项目的 `src/mp` 根目录下。
+在 `kbone-vue` 项目的 `src/mp` 根目录下，创建 `todos.mp.js` 文件：
+
+```js
+import Vue from 'vue'
+import todo from '../Todos.vue'
+
+export default function createApp() {
+  const container = document.createElement('div')
+  container.id = 'app'
+  document.body.appendChild(container)
+
+  return new Vue({
+    el: '#app',
+    render: h => h(todo)
+  })
+}
+```
 
 #### 3.4 修改kbone-vue项目的webpack.mp.config.js
 
