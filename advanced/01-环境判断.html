@@ -1,0 +1,736 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>01-环境判断 · 千锋大前端小册-Electron</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="古艺散人">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="02-多页开发.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"lurongtao","repo":"felixbooks-kbone","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../basics/01-Kbone简介.html">
+            
+                <a href="../basics/01-Kbone简介.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../basics/01-Kbone简介.html">
+            
+                <a href="../basics/01-Kbone简介.html">
+            
+                    
+                    01-Kbone介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../basics/02-快速开发.html">
+            
+                <a href="../basics/02-快速开发.html">
+            
+                    
+                    02-快速开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../basics/03-vue-todos-app.html">
+            
+                <a href="../basics/03-vue-todos-app.html">
+            
+                    
+                    03-Vue+Kbone 实现 Todos App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../basics/04-react-todos-app.html">
+            
+                <a href="../basics/04-react-todos-app.html">
+            
+                    
+                    04-React+Kbone 实现 Todos App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../basics/05-Kbone-Vue项目搭建流程.html">
+            
+                <a href="../basics/05-Kbone-Vue项目搭建流程.html">
+            
+                    
+                    05-Kbone+Vue 项目手工搭建流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../basics/06-Kbone-React项目搭建流程.html">
+            
+                <a href="../basics/06-Kbone-React项目搭建流程.html">
+            
+                    
+                    06-Kbone+React 项目手工搭建流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    高级
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="01-环境判断.html">
+            
+                <a href="01-环境判断.html">
+            
+                    
+                    01-环境判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="02-多页开发.html">
+            
+                <a href="02-多页开发.html">
+            
+                    
+                    02-多页开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../architect/01-微信开放社区方案实现与应用效果.html">
+            
+                <a href="../architect/01-微信开放社区方案实现与应用效果.html">
+            
+                    
+                    原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../architect/01-微信开放社区方案实现与应用效果.html">
+            
+                <a href="../architect/01-微信开放社区方案实现与应用效果.html">
+            
+                    
+                    01-微信开放社区方案实现与应用效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../thanks/">
+            
+                <a href="../thanks/">
+            
+                    
+                    感谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >01-环境判断</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x73AF;&#x5883;&#x5224;&#x65AD;"><b></b>&#x73AF;&#x5883;&#x5224;&#x65AD;</a></li><ul><ul><li><span class="title-icon "></span><a href="#1&#x3001;&#x7528;&#x6CD5;"><b></b>1&#x3001;&#x7528;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#2&#x3001;&#x6848;&#x4F8B;"><b></b>2&#x3001;&#x6848;&#x4F8B;</a></li></ul></ul></ul></div><a href="#&#x73AF;&#x5883;&#x5224;&#x65AD;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x73AF;&#x5883;&#x5224;&#x65AD;"><a name="&#x73AF;&#x5883;&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#&#x73AF;&#x5883;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x73AF;&#x5883;&#x5224;&#x65AD;" class="plugin-anchor" href="#&#x73AF;&#x5883;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x73AF;&#x5883;&#x5224;&#x65AD;</h1>
+<h3 id="1&#x3001;&#x7528;&#x6CD5;"><a name="1&#x3001;&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#x3001;&#x7528;&#x6CD5;" class="plugin-anchor" href="#1&#x3001;&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x7528;&#x6CD5;</h3>
+<p>&#x5BF9;&#x4E8E;&#x5F00;&#x53D1;&#x8005;&#x6765;&#x8BF4;&#xFF0C;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7AEF;&#x505A;&#x4E00;&#x4E9B;&#x7279;&#x6B8A;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x56E0;&#x6B64;&#x4E5F;&#x5C31;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x6765;&#x5224;&#x65AD;&#x533A;&#x5206;&#x4E0D;&#x540C;&#x7684;&#x73AF;&#x5883;&#x3002;kbone &#x63A8;&#x8350;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x901A;&#x8FC7; webpack &#x6CE8;&#x5165;&#x4E00;&#x4E2A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF1A; </p>
+<pre><code class="lang-js"><span class="hljs-comment">// webpack.mp.config.js</span>
+<span class="hljs-built_in">module</span>.exports = {
+  plugins: [
+    <span class="hljs-keyword">new</span> webpack.DefinePlugin({
+      <span class="hljs-string">&apos;process.env.isMiniprogram&apos;</span>: <span class="hljs-literal">true</span>,
+    }),
+    <span class="hljs-comment">// ... other options</span>
+  ],
+  <span class="hljs-comment">// ... other options</span>
+}
+</code></pre>
+<p>&#x540E;&#x7EED;&#x5728;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; process.env.isMiniprogram &#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x73AF;&#x5883;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (process.env.isMiniprogram) {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;in miniprogram&apos;</span>)
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;in web&apos;</span>)
+}
+</code></pre>
+<h3 id="2&#x3001;&#x6848;&#x4F8B;"><a name="2&#x3001;&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#x3001;&#x6848;&#x4F8B;" class="plugin-anchor" href="#2&#x3001;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x6848;&#x4F8B;</h3>
+<p>&#x672C;&#x6848;&#x4F8B;&#x901A;&#x8FC7;&#x6539;&#x9020; <code>kbone-vue-project</code> &#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<h5 id="21-&#x5728;-kbone-vue-projectbuild-&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;-webpackconfigjs&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;"><a name="21-&#x5728;-kbone-vue-projectbuild-&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;-webpackconfigjs&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#21-&#x5728;-kbone-vue-projectbuild-&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;-webpackconfigjs&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="21-&#x5728;-kbone-vue-projectbuild-&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;-webpackconfigjs&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;" class="plugin-anchor" href="#21-&#x5728;-kbone-vue-projectbuild-&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;-webpackconfigjs&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 &#x5728; <code>kbone-vue-project/build</code> &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; webpack.config.js&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</h5>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+<span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>)
+<span class="hljs-keyword">const</span> MiniCssExtractPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mini-css-extract-plugin&apos;</span>)
+<span class="hljs-keyword">const</span> { VueLoaderPlugin } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;vue-loader&apos;</span>)
+<span class="hljs-keyword">const</span> HtmlWebpackPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;html-webpack-plugin&apos;</span>)
+
+<span class="hljs-built_in">module</span>.exports = {
+  mode: <span class="hljs-string">&apos;development&apos;</span>,
+  entry: {
+    index: path.resolve(__dirname, <span class="hljs-string">&apos;../src/index/main.js&apos;</span>),
+  },
+  devServer: {
+    clientLogLevel: <span class="hljs-string">&apos;warning&apos;</span>,
+    historyApiFallback: {
+      rewrites: [{<span class="hljs-keyword">from</span>: <span class="hljs-regexp">/.*/</span>, to: <span class="hljs-string">&apos;/index.html&apos;</span>}],
+    },
+    hot: <span class="hljs-literal">true</span>,
+    contentBase: <span class="hljs-literal">false</span>,
+    compress: <span class="hljs-literal">true</span>,
+    host: process.env.HOST || <span class="hljs-string">&apos;localhost&apos;</span>,
+    port: +process.env.PORT || <span class="hljs-number">8080</span>,
+    open: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x81EA;&#x52A8;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;</span>
+    overlay: { warnings: <span class="hljs-literal">false</span>, errors: <span class="hljs-literal">true</span> }, <span class="hljs-comment">// &#x5C55;&#x793A;&#x5168;&#x5C4F;&#x62A5;&#x9519;</span>
+    publicPath: <span class="hljs-string">&apos;/&apos;</span>,
+    quiet: <span class="hljs-literal">true</span>, <span class="hljs-comment">// for FriendlyErrorsPlugin</span>
+    watchOptions: {
+      poll: <span class="hljs-literal">false</span>,
+    }
+  },
+  output: {
+    path: path.resolve(__dirname, <span class="hljs-string">&apos;../dist/web&apos;</span>),
+    publicPath: <span class="hljs-string">&apos;./&apos;</span>,
+    filename: <span class="hljs-string">&apos;[name].js&apos;</span>
+  },
+  target: <span class="hljs-string">&apos;web&apos;</span>,
+  <span class="hljs-built_in">module</span>: {
+    rules: [
+      {
+        test: <span class="hljs-regexp">/\.css$/</span>,
+        use: [
+          MiniCssExtractPlugin.loader,
+          <span class="hljs-string">&apos;css-loader&apos;</span>
+        ],
+      },
+      {
+        test: <span class="hljs-regexp">/\.vue$/</span>,
+        loader: <span class="hljs-string">&apos;vue-loader&apos;</span>,
+      },
+      {
+        test: <span class="hljs-regexp">/\.js$/</span>,
+        loader: <span class="hljs-string">&apos;babel-loader&apos;</span>,
+        exclude: <span class="hljs-regexp">/node_modules/</span>
+      },
+      {
+        test: <span class="hljs-regexp">/\.(png|jpg|gif|svg)$/</span>,
+        loader: <span class="hljs-string">&apos;file-loader&apos;</span>,
+        options: {
+          name: <span class="hljs-string">&apos;[name].[ext]?[hash]&apos;</span>
+        }
+      }
+    ]
+  },
+  resolve: {
+    extensions: [<span class="hljs-string">&apos;*&apos;</span>, <span class="hljs-string">&apos;.js&apos;</span>, <span class="hljs-string">&apos;.vue&apos;</span>, <span class="hljs-string">&apos;.json&apos;</span>]
+  },
+  plugins: [
+    <span class="hljs-keyword">new</span> MiniCssExtractPlugin({
+      filename: <span class="hljs-string">&apos;[name].css&apos;</span>
+    }),
+    <span class="hljs-keyword">new</span> VueLoaderPlugin(),
+    <span class="hljs-keyword">new</span> HtmlWebpackPlugin({
+      filename: <span class="hljs-string">&apos;index.html&apos;</span>,
+      chunks: [<span class="hljs-string">&apos;index&apos;</span>],
+      template: path.join(__dirname, <span class="hljs-string">&apos;../index.html&apos;</span>)
+    }),
+
+    <span class="hljs-comment">// &#x5728; Webpack &#x91CC;&#x6CE8;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF; isMiniprogram</span>
+    <span class="hljs-comment">// &#x6B64;&#x5904;&#x662F; web &#x73AF;&#x5883;&#xFF0C;&#x56E0;&#x6B64;&#x503C;&#x4E3A; false</span>
+    <span class="hljs-keyword">new</span> webpack.DefinePlugin({
+      <span class="hljs-string">&apos;process.env.isMiniprogram&apos;</span>: <span class="hljs-literal">false</span>,
+    }),
+  ],
+}
+</code></pre>
+<h5 id="22-&#x5728;-kbone-vue-projectsrcindex-&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;-mainjs&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;"><a name="22-&#x5728;-kbone-vue-projectsrcindex-&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;-mainjs&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#22-&#x5728;-kbone-vue-projectsrcindex-&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;-mainjs&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="22-&#x5728;-kbone-vue-projectsrcindex-&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;-mainjs&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;" class="plugin-anchor" href="#22-&#x5728;-kbone-vue-projectsrcindex-&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;-mainjs&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 &#x5728; kbone-vue-project/src/index &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; main.js&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</h5>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+<span class="hljs-keyword">import</span> Router <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue-router&apos;</span>
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./App.vue&apos;</span>
+<span class="hljs-keyword">import</span> AAA <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./AAA.vue&apos;</span>
+<span class="hljs-keyword">import</span> BBB <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./BBB.vue&apos;</span>
+
+<span class="hljs-comment">// &#x6DFB;&#x52A0;ENV.vue&#x7EC4;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x73AF;&#x5883;&#x5224;&#x65AD;&#x6848;&#x4F8B;</span>
+<span class="hljs-keyword">import</span> ENV <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ENV.vue&apos;</span>
+
+<span class="hljs-comment">// rem &#x548C;&#x9875;&#x9762;&#x6837;&#x5F0F;&#x4FEE;&#x6539;</span>
+<span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">document</span>.documentElement.style.fontSize = <span class="hljs-built_in">document</span>.documentElement.getBoundingClientRect().width / <span class="hljs-number">16</span> + <span class="hljs-string">&apos;px&apos;</span>
+  <span class="hljs-built_in">document</span>.documentElement.style.backgroundColor = <span class="hljs-string">&apos;#fffbe7&apos;</span>
+}
+<span class="hljs-built_in">window</span>.onerror = (message, source, lineno, colno, error) =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;window.onerror =&gt; &apos;</span>, message, source, lineno, colno, error)
+};
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;error&apos;</span>, evt =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;window.addEventListener(\&apos;error\&apos;) =&gt;&apos;</span>, evt))
+
+Vue.use(Router)
+
+<span class="hljs-keyword">const</span> router = <span class="hljs-keyword">new</span> Router({
+  mode: <span class="hljs-string">&apos;history&apos;</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x4F7F;&#x7528; history api</span>
+  routes: [
+    { path: <span class="hljs-string">&apos;/test/aaa&apos;</span>, component: AAA },
+    { path: <span class="hljs-string">&apos;/test/bbb&apos;</span>, component: BBB },
+
+    <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x8DEF;&#x7531;</span>
+    { path: <span class="hljs-string">&apos;/test/env&apos;</span>, component: ENV }
+  ]
+})
+
+<span class="hljs-keyword">new</span> Vue({
+  el: <span class="hljs-string">&apos;#app&apos;</span>,
+  router,
+  render: h =&gt; h(App)
+})
+</code></pre>
+<h5 id="23-&#x7F16;&#x5199;-envvue&#x7EC4;&#x4EF6;"><a name="23-&#x7F16;&#x5199;-envvue&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#23-&#x7F16;&#x5199;-envvue&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="23-&#x7F16;&#x5199;-envvue&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#23-&#x7F16;&#x5199;-envvue&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 &#x7F16;&#x5199; ENV.vue&#x7EC4;&#x4EF6;</h5>
+<p>&#x5728; <code>src/index</code> &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; ENV.vue &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-vue">&lt;template&gt;
+  &lt;div class=&quot;cnt&quot;&gt;
+    &lt;p&gt;I am env&lt;/p&gt;
+    &lt;p&gt;envinfo: {{envinfo}}&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: &apos;ENV&apos;,
+  computed: {
+    envinfo() {
+      if (process.env.isMiniprogram) {
+        return &apos;in miniprogram&apos;
+      } else {
+        return &apos;in web&apos;
+      }
+    }
+  }
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+.cnt {
+  width: 100%;
+  text-align: center;
+}
+&lt;/style&gt;
+</code></pre>
+<h5 id="24-&#x7F16;&#x5199;&#x5165;&#x53E3;&#x6587;&#x4EF6;-indexhtml"><a name="24-&#x7F16;&#x5199;&#x5165;&#x53E3;&#x6587;&#x4EF6;-indexhtml" class="anchor-navigation-ex-anchor" href="#24-&#x7F16;&#x5199;&#x5165;&#x53E3;&#x6587;&#x4EF6;-indexhtml"><i class="fa fa-link" aria-hidden="true"></i></a><a name="24-&#x7F16;&#x5199;&#x5165;&#x53E3;&#x6587;&#x4EF6;-indexhtml" class="plugin-anchor" href="#24-&#x7F16;&#x5199;&#x5165;&#x53E3;&#x6587;&#x4EF6;-indexhtml"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 &#x7F16;&#x5199;&#x5165;&#x53E3;&#x6587;&#x4EF6; index.html</h5>
+<p><strong>&#x9996;&#x5148;&#x5B89;&#x88C5; html-webpack-plugin &#x63D2;&#x4EF6;&#xFF1A;</strong></p>
+<pre><code>npm install html-webpack-plugin --save-dev
+</code></pre><p><strong>&#x5176;&#x6B21;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>index.html</code>&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</strong></p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,minimal-ui, viewport-fit=cover&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;yes&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;apple-mobile-web-app-capable&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;black&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;apple-mobile-web-app-status-bar-style&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;format-detection&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;telephone=no, email=no&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>vue<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span>&gt;</span><span class="css">
+      <span class="hljs-selector-id">#app</span> {
+        <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&apos;Avenir&apos;</span>, Helvetica, Arial, sans-serif;
+        <span class="hljs-attribute">-webkit-font-smoothing</span>: antialiased;
+        <span class="hljs-attribute">-moz-osx-font-smoothing</span>: grayscale;
+        <span class="hljs-attribute">text-align</span>: center;
+        <span class="hljs-attribute">color</span>: <span class="hljs-number">#2c3e50</span>;
+        <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">60px</span>;
+      }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h5 id="25-web&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;"><a name="25-web&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;" class="anchor-navigation-ex-anchor" href="#25-web&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="25-web&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;" class="plugin-anchor" href="#25-web&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5 Web&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;</h5>
+<p><strong>&#x5728; <code>package.json</code> &#x6587;&#x4EF6;&#x91CC;&#x6DFB;&#x52A0; <code>npm</code> &#x811A;&#x672C;&#xFF1A;</strong></p>
+<pre><code>&quot;scripts&quot;: {
+  &quot;web&quot;: &quot;cross-env NODE_ENV=development webpack-dev-server --inline --progress --config build/webpack.config.js&quot;,
+  &quot;build&quot;: &quot;rimraf dist/web &amp;&amp; cross-env NODE_ENV=production webpack --config build/webpack.config.js --progress --hide-modules&quot;,
+  // ...
+}
+</code></pre><p><strong>&#x5B89;&#x88C5; rimraf webpack-dev-server &#x6A21;&#x5757;&#xFF1A;</strong></p>
+<pre><code>npm install rimraf --save-dev
+npm install webpack-dev-server --save-dev
+</code></pre><p><strong>Web&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;</strong></p>
+<pre><code>npm run web
+</code></pre><p><img src="images/Snip20200326_193.png" width="300"></p>
+<h5 id="26-&#x4FEE;&#x6539;webpackmpconfigjs"><a name="26-&#x4FEE;&#x6539;webpackmpconfigjs" class="anchor-navigation-ex-anchor" href="#26-&#x4FEE;&#x6539;webpackmpconfigjs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="26-&#x4FEE;&#x6539;webpackmpconfigjs" class="plugin-anchor" href="#26-&#x4FEE;&#x6539;webpackmpconfigjs"><i class="fa fa-link" aria-hidden="true"></i></a>2.6 &#x4FEE;&#x6539;webpack.mp.config.js</h5>
+<pre><code class="lang-js"><span class="hljs-comment">// ...</span>
+
+<span class="hljs-built_in">module</span>.exports = {
+  <span class="hljs-comment">// ...</span>
+  plugins: [
+    <span class="hljs-comment">// ...</span>
+
+    <span class="hljs-comment">// &#x5728; Webpack &#x91CC;&#x6CE8;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF; isMiniprogram</span>
+    <span class="hljs-comment">// &#x6B64;&#x5904;&#x662F;&#x5C0F;&#x7A0B;&#x5E8F;&#x73AF;&#x5883;&#xFF0C;&#x56E0;&#x6B64;&#x503C;&#x4E3A; true</span>
+    <span class="hljs-keyword">new</span> webpack.DefinePlugin({
+      <span class="hljs-string">&apos;process.env.isMiniprogram&apos;</span>: <span class="hljs-literal">true</span>,
+    }),
+  ],
+}
+</code></pre>
+<h5 id="27-&#x4FEE;&#x6539;mainmpjs"><a name="27-&#x4FEE;&#x6539;mainmpjs" class="anchor-navigation-ex-anchor" href="#27-&#x4FEE;&#x6539;mainmpjs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="27-&#x4FEE;&#x6539;mainmpjs" class="plugin-anchor" href="#27-&#x4FEE;&#x6539;mainmpjs"><i class="fa fa-link" aria-hidden="true"></i></a>2.7 &#x4FEE;&#x6539;main.mp.js</h5>
+<pre><code class="lang-js"><span class="hljs-comment">// ...</span>
+
+<span class="hljs-comment">// &#x6DFB;&#x52A0;ENV.vue&#x7EC4;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x73AF;&#x5883;&#x5224;&#x65AD;&#x6848;&#x4F8B;</span>
+<span class="hljs-keyword">import</span> ENV <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./ENV.vue&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createApp</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-keyword">const</span> router = <span class="hljs-keyword">new</span> Router({
+    <span class="hljs-comment">// ...</span>
+    routes: [
+      <span class="hljs-comment">// ...</span>
+
+      <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x8DEF;&#x7531;</span>
+      { path: <span class="hljs-string">&apos;/test/env&apos;</span>, component: ENV }
+    ]
+  })
+
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p><strong>&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;</strong></p>
+<pre><code>npm run mp
+</code></pre><p><img src="images/Snip20200326_192.png" width="300"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 高级">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="02-多页开发.html" class="navigation navigation-next " aria-label="Next page: 02-多页开发">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"01-环境判断","level":"1.3.1","depth":2,"next":{"title":"02-多页开发","level":"1.3.2","depth":2,"path":"advanced/02-多页开发.md","ref":"./advanced/02-多页开发.md","articles":[]},"previous":{"title":"高级","level":"1.3","depth":1,"path":"advanced/README.md","ref":"./advanced/README.md","articles":[{"title":"01-环境判断","level":"1.3.1","depth":2,"path":"advanced/01-环境判断.md","ref":"./advanced/01-环境判断.md","articles":[]},{"title":"02-多页开发","level":"1.3.2","depth":2,"path":"advanced/02-多页开发.md","ref":"./advanced/02-多页开发.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex","favicon","insert-logo"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/lurongtao/felixbooks-kbone"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"lurongtao","repo":"felixbooks-kbone","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"url":"/felixbooks-kbone/images/logo-kbone.png","style":"background: skyblue; width: 100%; height: 100%;"}},"theme":"default","author":"古艺散人","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"千锋大前端小册-Electron","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"Electron 入门与实战"},"file":{"path":"advanced/01-环境判断.md","mtime":"2020-03-26T08:06:55.676Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-29T23:28:18.336Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

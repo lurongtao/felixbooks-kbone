@@ -1,0 +1,891 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>04-React+Kbone 实现 Todos App · 千锋大前端小册-Electron</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="古艺散人">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="05-Kbone-Vue项目搭建流程.html" />
+    
+    
+    <link rel="prev" href="03-vue-todos-app.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"lurongtao","repo":"felixbooks-kbone","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-Kbone简介.html">
+            
+                <a href="01-Kbone简介.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01-Kbone简介.html">
+            
+                <a href="01-Kbone简介.html">
+            
+                    
+                    01-Kbone介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02-快速开发.html">
+            
+                <a href="02-快速开发.html">
+            
+                    
+                    02-快速开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03-vue-todos-app.html">
+            
+                <a href="03-vue-todos-app.html">
+            
+                    
+                    03-Vue+Kbone 实现 Todos App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="04-react-todos-app.html">
+            
+                <a href="04-react-todos-app.html">
+            
+                    
+                    04-React+Kbone 实现 Todos App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="05-Kbone-Vue项目搭建流程.html">
+            
+                <a href="05-Kbone-Vue项目搭建流程.html">
+            
+                    
+                    05-Kbone+Vue 项目手工搭建流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="06-Kbone-React项目搭建流程.html">
+            
+                <a href="06-Kbone-React项目搭建流程.html">
+            
+                    
+                    06-Kbone+React 项目手工搭建流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../advanced/">
+            
+                <a href="../advanced/">
+            
+                    
+                    高级
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../advanced/01-环境判断.html">
+            
+                <a href="../advanced/01-环境判断.html">
+            
+                    
+                    01-环境判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../advanced/02-多页开发.html">
+            
+                <a href="../advanced/02-多页开发.html">
+            
+                    
+                    02-多页开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../architect/01-微信开放社区方案实现与应用效果.html">
+            
+                <a href="../architect/01-微信开放社区方案实现与应用效果.html">
+            
+                    
+                    原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../architect/01-微信开放社区方案实现与应用效果.html">
+            
+                <a href="../architect/01-微信开放社区方案实现与应用效果.html">
+            
+                    
+                    01-微信开放社区方案实现与应用效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../thanks/">
+            
+                <a href="../thanks/">
+            
+                    
+                    感谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >04-React+Kbone 实现 Todos App</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#react--kbone-&#x5B9E;&#x73B0;-todos-app"><b></b>React + Kbone &#x5B9E;&#x73B0; Todos App</a></li><ul><ul><li><span class="title-icon "></span><a href="#1&#x3001;&#x642D;&#x5EFA;react&#x5F00;&#x53D1;&#x73AF;&#x5883;"><b></b>1&#x3001;&#x642D;&#x5EFA;React&#x5F00;&#x53D1;&#x73AF;&#x5883;</a></li><li><span class="title-icon "></span><a href="#2&#x3001;&#x7F16;&#x5199;react-todos&#x4EE3;&#x7801;"><b></b>2&#x3001;&#x7F16;&#x5199;React todos&#x4EE3;&#x7801;</a></li><li><span class="title-icon "></span><a href="#3&#x3001;&#x5C06;-react-&#x9879;&#x76EE;&#x7F16;&#x5165;kbone"><b></b>3&#x3001;&#x5C06; React &#x9879;&#x76EE;&#x7F16;&#x5165;Kbone</a></li></ul></ul></ul></div><a href="#react--kbone-&#x5B9E;&#x73B0;-todos-app" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="react--kbone-&#x5B9E;&#x73B0;-todos-app"><a name="react--kbone-&#x5B9E;&#x73B0;-todos-app" class="anchor-navigation-ex-anchor" href="#react--kbone-&#x5B9E;&#x73B0;-todos-app"><i class="fa fa-link" aria-hidden="true"></i></a><a name="react--kbone-&#x5B9E;&#x73B0;-todos-app" class="plugin-anchor" href="#react--kbone-&#x5B9E;&#x73B0;-todos-app"><i class="fa fa-link" aria-hidden="true"></i></a>React + Kbone &#x5B9E;&#x73B0; Todos App</h1>
+<h3 id="1&#x3001;&#x642D;&#x5EFA;react&#x5F00;&#x53D1;&#x73AF;&#x5883;"><a name="1&#x3001;&#x642D;&#x5EFA;react&#x5F00;&#x53D1;&#x73AF;&#x5883;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x642D;&#x5EFA;react&#x5F00;&#x53D1;&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#x3001;&#x642D;&#x5EFA;react&#x5F00;&#x53D1;&#x73AF;&#x5883;" class="plugin-anchor" href="#1&#x3001;&#x642D;&#x5EFA;react&#x5F00;&#x53D1;&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x642D;&#x5EFA;React&#x5F00;&#x53D1;&#x73AF;&#x5883;</h3>
+<p>&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>react-todos</code> &#x9879;&#x76EE;&#xFF1A;</p>
+<pre><code>// &#x5982;&#x679C;&#x5168;&#x5C40;&#x6CA1;&#x6709;&#x5B89;&#x88C5;create-react-app, &#x53EF;&#x4EE5;&#x4F7F;&#x7528;npx&#x5B89;&#x88C5;
+npx create-react-app react-todos
+
+// &#x8FD0;&#x884C;&#x9879;&#x76EE;
+cd react-todos
+npm start
+</code></pre><h3 id="2&#x3001;&#x7F16;&#x5199;react-todos&#x4EE3;&#x7801;"><a name="2&#x3001;&#x7F16;&#x5199;react-todos&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x7F16;&#x5199;react-todos&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#x3001;&#x7F16;&#x5199;react-todos&#x4EE3;&#x7801;" class="plugin-anchor" href="#2&#x3001;&#x7F16;&#x5199;react-todos&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x7F16;&#x5199;React todos&#x4EE3;&#x7801;</h3>
+<h4 id="21-&#x6539;&#x5199;indexjs"><a name="21-&#x6539;&#x5199;indexjs" class="anchor-navigation-ex-anchor" href="#21-&#x6539;&#x5199;indexjs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="21-&#x6539;&#x5199;indexjs" class="plugin-anchor" href="#21-&#x6539;&#x5199;indexjs"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 &#x6539;&#x5199;index.js</h4>
+<p>&#x5F15;&#x5165;&#x7EC4;&#x4EF6;Todos.js&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// ...</span>
+
+<span class="hljs-keyword">import</span> Todos <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Todos&apos;</span>;
+<span class="hljs-comment">// ...</span>
+
+ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Todos</span> /&gt;</span>, document.getElementById(&apos;root&apos;));
+// ...
+</span></code></pre>
+<h4 id="22-&#x7F16;&#x5199;-todoscss"><a name="22-&#x7F16;&#x5199;-todoscss" class="anchor-navigation-ex-anchor" href="#22-&#x7F16;&#x5199;-todoscss"><i class="fa fa-link" aria-hidden="true"></i></a><a name="22-&#x7F16;&#x5199;-todoscss" class="plugin-anchor" href="#22-&#x7F16;&#x5199;-todoscss"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 &#x7F16;&#x5199; Todos.css</h4>
+<p>&#x5728;&#x9879;&#x76EE;&#x76EE;&#x5F55; <code>react-todos/src</code> &#x4E0B;&#x521B;&#x5EFA; <code>Todos.css</code>&#xFF1A;</p>
+<pre><code class="lang-css"><span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#222222</span>;
+  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100vh</span>;
+}
+
+<span class="hljs-selector-class">.app</span> {
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">10rem</span>;
+}
+
+<span class="hljs-selector-class">.header</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">50px</span>;
+  <span class="hljs-attribute">color</span>: yellowgreen;
+}
+
+<span class="hljs-selector-class">.logo</span> {
+  <span class="hljs-attribute">animation</span>: App-logo-spin infinite <span class="hljs-number">20s</span> linear;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">2vmin</span>;
+  <span class="hljs-attribute">pointer-events</span>: none;
+}
+
+<span class="hljs-selector-class">.todo-list</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">color</span>: white;
+}
+
+<span class="hljs-selector-class">.todo</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">1rem</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.todo-is-completed</span> <span class="hljs-selector-class">.checkbox</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
+}
+
+<span class="hljs-selector-class">.todo-is-completed</span> <span class="hljs-selector-tag">input</span> {
+  <span class="hljs-attribute">text-decoration</span>: line-through;
+}
+
+<span class="hljs-selector-class">.checkbox</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">18px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">18px</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">transition</span>: background-color .<span class="hljs-number">2s</span> ease-in-out;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#fff</span>;
+}
+
+<span class="hljs-selector-class">.checkbox</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgba</span>(255, 255, 255, 0.25);
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">rgba</span>(255, 255, 255, 0);
+}
+
+<span class="hljs-selector-class">.checkbox-checked</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
+}
+
+<span class="hljs-selector-tag">ul</span> {
+  <span class="hljs-attribute">list-style</span>: none;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">2rem</span>;
+}
+
+<span class="hljs-selector-tag">input</span> {
+  <span class="hljs-attribute">border</span>: none;
+  <span class="hljs-attribute">background</span>: transparent;
+  <span class="hljs-attribute">color</span>: white;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.4rem</span>;
+  <span class="hljs-attribute">outline</span>: none;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+}
+</code></pre>
+<h4 id="23-&#x7F16;&#x5199;-todosjs-&#x7EC4;&#x4EF6;"><a name="23-&#x7F16;&#x5199;-todosjs-&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#23-&#x7F16;&#x5199;-todosjs-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="23-&#x7F16;&#x5199;-todosjs-&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#23-&#x7F16;&#x5199;-todosjs-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 &#x7F16;&#x5199; Todos.js &#x7EC4;&#x4EF6;</h4>
+<p>&#x5728;&#x9879;&#x76EE;&#x76EE;&#x5F55; <code>react-todos/src</code> &#x4E0B;&#x521B;&#x5EFA; <code>Todos.js</code>&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./Todos.css&apos;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Todos</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [todos, setTodos] = useState([
+    {
+      content: <span class="hljs-string">&apos;&#x5E72;&#x6D17;&#x8863;&#x670D;&apos;</span>,
+      isCompleted: <span class="hljs-literal">true</span>,
+    },
+    {
+      content: <span class="hljs-string">&apos;&#x7406;&#x53D1;&apos;</span>,
+      isCompleted: <span class="hljs-literal">false</span>,
+    },
+    {
+      content: <span class="hljs-string">&apos;&#x5B66;&#x4E60;Kbone&apos;</span>,
+      isCompleted: <span class="hljs-literal">false</span>,
+    }
+  ])
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleKeyDown</span>(<span class="hljs-params">e, i</span>) </span>{
+    <span class="hljs-keyword">if</span> (e.key === <span class="hljs-string">&apos;Enter&apos;</span>) {
+      createTodoAtIndex(e, i)
+    }
+    <span class="hljs-keyword">if</span> (e.key === <span class="hljs-string">&apos;Backspace&apos;</span> &amp;&amp; todos[i].content === <span class="hljs-string">&apos;&apos;</span>) {
+      e.preventDefault();
+      <span class="hljs-keyword">return</span> removeTodoAtIndex(i)
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createTodoAtIndex</span>(<span class="hljs-params">e, i</span>) </span>{
+    <span class="hljs-keyword">const</span> newTodos = [...todos];
+    newTodos.splice(i + <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, {
+      content: <span class="hljs-string">&apos;&apos;</span>,
+      isCompleted: <span class="hljs-literal">false</span>,
+    })
+    setTodos(newTodos);
+    setTimeout(() =&gt; {
+      <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[i + <span class="hljs-number">1</span>].focus();
+    }, <span class="hljs-number">0</span>)
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">updateTodoAtIndex</span>(<span class="hljs-params">e, i</span>) </span>{
+    <span class="hljs-keyword">const</span> newTodos = [...todos]
+    newTodos[i].content = e.target.value
+    setTodos(newTodos)
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeTodoAtIndex</span>(<span class="hljs-params">i</span>) </span>{
+    <span class="hljs-keyword">if</span> (i === <span class="hljs-number">0</span> &amp;&amp; todos.length === <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span>
+    setTodos(todos =&gt; todos.slice(<span class="hljs-number">0</span>, i).concat(todos.slice(i + <span class="hljs-number">1</span>, todos.length)))
+    setTimeout(() =&gt; {
+      <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[i - <span class="hljs-number">1</span>].focus()
+    }, <span class="hljs-number">0</span>)
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toggleTodoCompleteAtIndex</span>(<span class="hljs-params">index</span>) </span>{
+    <span class="hljs-keyword">const</span> temporaryTodos = [...todos]
+    temporaryTodos[index].isCompleted = !temporaryTodos[index].isCompleted
+    setTodos(temporaryTodos)
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
+        React Todos
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;todo-list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+          {todos.map((todo, i) =&gt; (
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{todo+i}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{`todo</span> ${<span class="hljs-attr">todo.isCompleted</span> &amp;&amp; &apos;<span class="hljs-attr">todo-is-completed</span>&apos;}`}&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{&apos;checkbox&apos;}</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> toggleTodoCompleteAtIndex(i)}&gt;
+                {todo.isCompleted &amp;&amp; (
+                  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&amp;#x2714;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                )}
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+                <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>
+                <span class="hljs-attr">value</span>=<span class="hljs-string">{todo.content}</span>
+                <span class="hljs-attr">onKeyDown</span>=<span class="hljs-string">{e</span> =&gt;</span> handleKeyDown(e, i)}
+                onChange={e =&gt; updateTodoAtIndex(e, i)}
+              /&gt;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          ))}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  )
+}
+
+export default Todos
+</span></code></pre>
+<h4 id="24-&#x9879;&#x76EE;&#x9884;&#x89C8;&#x6548;&#x679C;"><a name="24-&#x9879;&#x76EE;&#x9884;&#x89C8;&#x6548;&#x679C;" class="anchor-navigation-ex-anchor" href="#24-&#x9879;&#x76EE;&#x9884;&#x89C8;&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="24-&#x9879;&#x76EE;&#x9884;&#x89C8;&#x6548;&#x679C;" class="plugin-anchor" href="#24-&#x9879;&#x76EE;&#x9884;&#x89C8;&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 &#x9879;&#x76EE;&#x9884;&#x89C8;&#x6548;&#x679C;</h4>
+<p>&#x5728;&#x63A7;&#x5236;&#x53F0;&#x6267;&#x884C; <code>npm start</code> &#x547D;&#x4EE4;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="images/Snip20200323_158.png" width="300"></p>
+<h3 id="3&#x3001;&#x5C06;-react-&#x9879;&#x76EE;&#x7F16;&#x5165;kbone"><a name="3&#x3001;&#x5C06;-react-&#x9879;&#x76EE;&#x7F16;&#x5165;kbone" class="anchor-navigation-ex-anchor" href="#3&#x3001;&#x5C06;-react-&#x9879;&#x76EE;&#x7F16;&#x5165;kbone"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3&#x3001;&#x5C06;-react-&#x9879;&#x76EE;&#x7F16;&#x5165;kbone" class="plugin-anchor" href="#3&#x3001;&#x5C06;-react-&#x9879;&#x76EE;&#x7F16;&#x5165;kbone"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x5C06; React &#x9879;&#x76EE;&#x7F16;&#x5165;Kbone</h3>
+<h4 id="31-&#x642D;&#x5EFA;kbone&#x7684;react&#x73AF;&#x5883;"><a name="31-&#x642D;&#x5EFA;kbone&#x7684;react&#x73AF;&#x5883;" class="anchor-navigation-ex-anchor" href="#31-&#x642D;&#x5EFA;kbone&#x7684;react&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="31-&#x642D;&#x5EFA;kbone&#x7684;react&#x73AF;&#x5883;" class="plugin-anchor" href="#31-&#x642D;&#x5EFA;kbone&#x7684;react&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 &#x642D;&#x5EFA;Kbone&#x7684;React&#x73AF;&#x5883;</h4>
+<pre><code>kbone init kbone-react
+&#x6A21;&#x677F;&#x9009;&#x62E9; react
+
+cd kbone-react
+npm run web
+npm run mp
+</code></pre><p>&#x6548;&#x679C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="images/Snip20200322_146.png" width="300">
+<img src="images/Snip20200322_147.png" width="300"></p>
+<h4 id="32-&#x4FEE;&#x6539;-indexjs"><a name="32-&#x4FEE;&#x6539;-indexjs" class="anchor-navigation-ex-anchor" href="#32-&#x4FEE;&#x6539;-indexjs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="32-&#x4FEE;&#x6539;-indexjs" class="plugin-anchor" href="#32-&#x4FEE;&#x6539;-indexjs"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 &#x4FEE;&#x6539; index.js</h4>
+<p>&#x4FEE;&#x6539; <code>kbone-react/src/index.js</code>&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// ...</span>
+<span class="hljs-comment">// import Counter from &apos;./components/counter&apos;</span>
+<span class="hljs-keyword">import</span> Todos <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./components/todos/Todos&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createApp</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// ...</span>
+
+  ReactDOM.render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Todos</span> /&gt;</span>, container)
+}
+
+// ...
+</span></code></pre>
+<h4 id="33-&#x521B;&#x5EFA;-todosjs-&#x7EC4;&#x4EF6;"><a name="33-&#x521B;&#x5EFA;-todosjs-&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#33-&#x521B;&#x5EFA;-todosjs-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="33-&#x521B;&#x5EFA;-todosjs-&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#33-&#x521B;&#x5EFA;-todosjs-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 &#x521B;&#x5EFA; Todos.js &#x7EC4;&#x4EF6;</h4>
+<p>&#x5728; kbone-react/src/components &#x4E0B;&#x521B;&#x5EFA; todos&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x521B;&#x5EFA;Todos.js&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">&apos;./Todos.css&apos;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Todos</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> [todos, setTodos] = useState([
+    {
+      content: <span class="hljs-string">&apos;&#x5E72;&#x6D17;&#x8863;&#x670D;&apos;</span>,
+      isCompleted: <span class="hljs-literal">true</span>,
+    },
+    {
+      content: <span class="hljs-string">&apos;&#x7406;&#x53D1;&apos;</span>,
+      isCompleted: <span class="hljs-literal">false</span>,
+    },
+    {
+      content: <span class="hljs-string">&apos;&#x5B66;&#x4E60;Kbone&apos;</span>,
+      isCompleted: <span class="hljs-literal">false</span>,
+    }
+  ])
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleKeyDown</span>(<span class="hljs-params">e, i</span>) </span>{
+    <span class="hljs-keyword">if</span> (e.key === <span class="hljs-string">&apos;Enter&apos;</span>) {
+      createTodoAtIndex(e, i)
+    }
+    <span class="hljs-keyword">if</span> (e.key === <span class="hljs-string">&apos;Backspace&apos;</span> &amp;&amp; todos[i].content === <span class="hljs-string">&apos;&apos;</span>) {
+      e.preventDefault();
+      <span class="hljs-keyword">return</span> removeTodoAtIndex(i)
+    }
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createTodoAtIndex</span>(<span class="hljs-params">e, i</span>) </span>{
+    <span class="hljs-keyword">const</span> newTodos = [...todos];
+    newTodos.splice(i + <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, {
+      content: <span class="hljs-string">&apos;&apos;</span>,
+      isCompleted: <span class="hljs-literal">false</span>,
+    })
+    setTodos(newTodos);
+    setTimeout(() =&gt; {
+      <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[i + <span class="hljs-number">1</span>].focus();
+    }, <span class="hljs-number">0</span>)
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">updateTodoAtIndex</span>(<span class="hljs-params">e, i</span>) </span>{
+    <span class="hljs-keyword">const</span> newTodos = [...todos]
+    newTodos[i].content = e.target.value
+    setTodos(newTodos)
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeTodoAtIndex</span>(<span class="hljs-params">i</span>) </span>{
+    <span class="hljs-keyword">if</span> (i === <span class="hljs-number">0</span> &amp;&amp; todos.length === <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span>
+    setTodos(todos =&gt; todos.slice(<span class="hljs-number">0</span>, i).concat(todos.slice(i + <span class="hljs-number">1</span>, todos.length)))
+    setTimeout(() =&gt; {
+      <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].elements[i - <span class="hljs-number">1</span>].focus()
+    }, <span class="hljs-number">0</span>)
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toggleTodoCompleteAtIndex</span>(<span class="hljs-params">index</span>) </span>{
+    <span class="hljs-keyword">const</span> temporaryTodos = [...todos]
+    temporaryTodos[index].isCompleted = !temporaryTodos[index].isCompleted
+    setTodos(temporaryTodos)
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;header&quot;</span>&gt;</span>
+        React Todos
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;todo-list&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+          {todos.map((todo, i) =&gt; (
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{todo+i}</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{`todo</span> ${<span class="hljs-attr">todo.isCompleted</span> &amp;&amp; &apos;<span class="hljs-attr">todo-is-completed</span>&apos;}`}&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{&apos;checkbox&apos;}</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> toggleTodoCompleteAtIndex(i)}&gt;
+                {todo.isCompleted &amp;&amp; (
+                  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>&amp;#x2714;<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                )}
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+                <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span>
+                <span class="hljs-attr">value</span>=<span class="hljs-string">{todo.content}</span>
+                <span class="hljs-attr">onKeyDown</span>=<span class="hljs-string">{e</span> =&gt;</span> handleKeyDown(e, i)}
+                onChange={e =&gt; updateTodoAtIndex(e, i)}
+              /&gt;
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+          ))}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  )
+}
+
+export default Todos
+</span></code></pre>
+<h4 id="34-&#x521B;&#x5EFA;-todoscss-&#x6837;&#x5F0F;"><a name="34-&#x521B;&#x5EFA;-todoscss-&#x6837;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#34-&#x521B;&#x5EFA;-todoscss-&#x6837;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="34-&#x521B;&#x5EFA;-todoscss-&#x6837;&#x5F0F;" class="plugin-anchor" href="#34-&#x521B;&#x5EFA;-todoscss-&#x6837;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>3.4 &#x521B;&#x5EFA; Todos.css &#x6837;&#x5F0F;</h4>
+<pre><code class="lang-css"><span class="hljs-selector-tag">body</span> {
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#222222</span>;
+  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100vh</span>;
+}
+
+<span class="hljs-selector-class">.app</span> {
+  <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">10rem</span>;
+}
+
+<span class="hljs-selector-class">.header</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">50px</span>;
+  <span class="hljs-attribute">color</span>: yellowgreen;
+}
+
+<span class="hljs-selector-class">.logo</span> {
+  <span class="hljs-attribute">animation</span>: App-logo-spin infinite <span class="hljs-number">20s</span> linear;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">2vmin</span>;
+  <span class="hljs-attribute">pointer-events</span>: none;
+}
+
+<span class="hljs-selector-class">.todo-list</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">color</span>: white;
+}
+
+<span class="hljs-selector-class">.todo</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">1rem</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-selector-class">.todo-is-completed</span> <span class="hljs-selector-class">.checkbox</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
+}
+
+<span class="hljs-selector-class">.todo-is-completed</span> <span class="hljs-selector-tag">input</span> {
+  <span class="hljs-attribute">text-decoration</span>: line-through;
+}
+
+<span class="hljs-selector-class">.checkbox</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">18px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">18px</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>;
+  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">cursor</span>: pointer;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">10px</span>;
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: center;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">transition</span>: background-color .<span class="hljs-number">2s</span> ease-in-out;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#fff</span>;
+}
+
+<span class="hljs-selector-class">.checkbox</span><span class="hljs-selector-pseudo">:hover</span> {
+  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgba</span>(255, 255, 255, 0.25);
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">rgba</span>(255, 255, 255, 0);
+}
+
+<span class="hljs-selector-class">.checkbox-checked</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>;
+}
+
+<span class="hljs-selector-tag">ul</span> {
+  <span class="hljs-attribute">list-style</span>: none;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">2rem</span>;
+}
+
+<span class="hljs-selector-tag">input</span> {
+  <span class="hljs-attribute">border</span>: none;
+  <span class="hljs-attribute">background</span>: transparent;
+  <span class="hljs-attribute">color</span>: white;
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.4rem</span>;
+  <span class="hljs-attribute">outline</span>: none;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+}
+</code></pre>
+<h4 id="35-&#x9879;&#x76EE;&#x9884;&#x89C8;&#x6548;&#x679C;"><a name="35-&#x9879;&#x76EE;&#x9884;&#x89C8;&#x6548;&#x679C;" class="anchor-navigation-ex-anchor" href="#35-&#x9879;&#x76EE;&#x9884;&#x89C8;&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="35-&#x9879;&#x76EE;&#x9884;&#x89C8;&#x6548;&#x679C;" class="plugin-anchor" href="#35-&#x9879;&#x76EE;&#x9884;&#x89C8;&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>3.5 &#x9879;&#x76EE;&#x9884;&#x89C8;&#x6548;&#x679C;</h4>
+<p>&#x547D;&#x4EE4;&#x884C;&#x8FDB;&#x5165; kbone-react &#x76EE;&#x5F55;&#xFF0C;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code>npm run web
+npm run mp (&#x6216;&#x8005; npm start)
+</code></pre><p><img src="images/Snip20200323_158.png" width="300">
+<img src="images/Snip20200323_159.png" width="300"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03-vue-todos-app.html" class="navigation navigation-prev " aria-label="Previous page: 03-Vue+Kbone 实现 Todos App">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="05-Kbone-Vue项目搭建流程.html" class="navigation navigation-next " aria-label="Next page: 05-Kbone+Vue 项目手工搭建流程">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"04-React+Kbone 实现 Todos App","level":"1.2.4","depth":2,"next":{"title":"05-Kbone+Vue 项目手工搭建流程","level":"1.2.5","depth":2,"path":"basics/05-Kbone-Vue项目搭建流程.md","ref":"./basics/05-Kbone-Vue项目搭建流程.md","articles":[]},"previous":{"title":"03-Vue+Kbone 实现 Todos App","level":"1.2.3","depth":2,"path":"basics/03-vue-todos-app.md","ref":"./basics/03-vue-todos-app.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex","favicon","insert-logo"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/lurongtao/felixbooks-kbone"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"lurongtao","repo":"felixbooks-kbone","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"url":"/felixbooks-kbone/images/logo-kbone.png","style":"background: skyblue; width: 100%; height: 100%;"}},"theme":"default","author":"古艺散人","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"千锋大前端小册-Electron","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"Electron 入门与实战"},"file":{"path":"basics/04-react-todos-app.md","mtime":"2020-03-25T06:50:27.422Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-29T23:28:18.336Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
