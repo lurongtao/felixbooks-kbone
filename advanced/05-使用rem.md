@@ -1,40 +1,54 @@
-# 环境判断
+# 使用 rem
+
+`kbone` 没有支持 `rpx`，取而代之的是可以使用更为传统的 `rem` 进行开发。使用流程如下：
 
 ### 1、用法
 
-对于开发者来说，可能需要针对不同端做一些特殊的逻辑，因此也就需要一个方法来判断区分不同的环境。kbone 推荐的做法是通过 webpack 注入一个环境变量： 
+#### 1.1 修改 webpack 插件配置
+
+在 mp-webpack-plugin 这个插件的配置中的 global 字段内补充 rem 配置。
 
 ```js
-// webpack.mp.config.js
 module.exports = {
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env.isMiniprogram': true,
-    }),
-    // ... other options
-  ],
+  global: {
+    rem: true,
+  },
   // ... other options
 }
 ```
 
-后续在业务代码中，就可以通过 process.env.isMiniprogram 来判断是否在小程序环境：
+#### 1.2 在业务代码里就可以设置 html 的 font-size 样式了，比如如下方式：
 
 ```js
-if (process.env.isMiniprogram) {
-  console.log('in miniprogram')
-} else {
-  console.log('in web')
+window.onload = function() {
+  if (process.env.isMiniprogram) {
+    // 小程序
+    document.documentElement.style.fontSize = wx.getSystemInfoSync().screenWidth / 16 + 'px'
+  } else {
+    // Web 端
+    document.documentElement.style.fontSize = document.documentElement.getBoundingClientRect().width / 16 + 'px'
+  }
 }
 ```
 
+#### 1.3 在业务代码的样式里使用 rem。
+
+```
+.content {
+  width: 10rem;
+}
+```
+
+> PS：这个特性只在基础库 2.9.0 及以上版本支持。
+
 ### 2、案例
 
-在 `kbone-advanced` 目录下创建 `01-env` 目录，本案例在这个目录下完成。
+在 `kbone-advanced` 目录下创建 `05-rem` 目录，本案例在这个目录下完成。
 
 #### 2.1 创建 package.json
 
 ```
-cd 01-env
+cd 05-rem
 npm init -y
 ```
 
@@ -90,11 +104,12 @@ npm install
 
 #### 2.2 配置 webpack
 
-在 01-env/build 目录下创建 webpack.config.js，内容如下：
+在 05-rem/build 目录下创建 webpack.config.js，内容如下：
 
 ```js
 var path = require('path')
 var MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -146,6 +161,9 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.isMiniprogram': false, // 注入环境变量，用于业务代码判断
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css'
     }),
@@ -167,6 +185,16 @@ module.exports = {
 import Vue from 'vue'
 import App from './App'
 
+window.onload = function() {
+  if (process.env.isMiniprogram) {
+    // 小程序
+    document.documentElement.style.fontSize = wx.getSystemInfoSync().screenWidth / 16 + 'px'
+  } else {
+    // Web 端
+    document.documentElement.style.fontSize = document.documentElement.getBoundingClientRect().width / 16 + 'px'
+  }
+}
+
 new Vue({
   el: '#app',
   render: h => h(App)
@@ -175,12 +203,12 @@ new Vue({
 
 #### 2.3 创建 App.vue
 
-在 `01-env/src` 目录下创建 `App.vue`，内容如下：
+在 `05-rem/src` 目录下创建 `App.vue`，内容如下：
 
 ```vue
 <template>
-  <div>
-    I am {{info}}
+  <div class="title">
+    hello, {{info}}!
   </div>
 </template>
 
@@ -189,14 +217,21 @@ export default {
   computed: {
     info() {
       if (process.env.isMiniprogram) {
-        return 'in miniprogram'
+        return 'miniprogram'
       } else {
-        return 'in web'
+        return 'web'
       }
     }
   }
 }
 </script>
+
+<style lang="css">
+.title {
+  font-size: 1rem;
+  color:brown;
+}
+</style>
 ```
 
 #### 2.4 编写入口文件 index.html
@@ -233,14 +268,14 @@ export default {
 #### 2.5 Web端效果预览
 
 ```
-npm run web
+npm run build
 ```
 
-<img src="./images/Snip20200330_204.png" width="300">
+<img src="./images/Snip20200423_1.png" width="300">
 
 #### 2.6 创建 webpack.mp.config.js
 
-在 `01-env/build` 目录下创建 webpack.mp.config.js，内容如下：
+在 `05-rem/build` 目录下创建 webpack.mp.config.js，内容如下：
 
 ```js
 const path = require('path')
@@ -366,7 +401,7 @@ module.exports = {
 
 #### 2.7 创建 main.mp.js
 
-在 `01-env/src` 下创建 `main.mp.js` 文件，内容如下：
+在 `05-rem/src` 下创建 `main.mp.js` 文件，内容如下：
 
 ```js
 import Vue from 'vue'
@@ -376,6 +411,16 @@ export default function createApp() {
   const container = document.createElement('div')
   container.id = 'app'
   document.body.appendChild(container)
+
+  window.onload = function() {
+    if (process.env.isMiniprogram) {
+      // 小程序
+      document.documentElement.style.fontSize = wx.getSystemInfoSync().screenWidth / 16 + 'px'
+    } else {
+      // Web 端
+      document.documentElement.style.fontSize = document.documentElement.getBoundingClientRect().width / 16 + 'px'
+    }
+  }
 
   return new Vue({
     el: '#app',
@@ -390,4 +435,4 @@ export default function createApp() {
 npm run mp
 ```
 
-<img src="./images/Snip20200330_203.png" width="300">
+<img src="./images/Snip20200423_4.png" width="300">
