@@ -1,0 +1,1143 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>04-使用小程序自定义组件 · 千锋大前端小册-Electron</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="古艺散人">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="05-使用rem.html" />
+    
+    
+    <link rel="prev" href="03-使用小程序内置组件.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"lurongtao","repo":"felixbooks-kbone","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../basics/01-Kbone简介.html">
+            
+                <a href="../basics/01-Kbone简介.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../basics/01-Kbone简介.html">
+            
+                <a href="../basics/01-Kbone简介.html">
+            
+                    
+                    01-Kbone介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../basics/02-快速开发.html">
+            
+                <a href="../basics/02-快速开发.html">
+            
+                    
+                    02-快速开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../basics/03-vue-todos-app.html">
+            
+                <a href="../basics/03-vue-todos-app.html">
+            
+                    
+                    03-Vue+Kbone 实现 Todos App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../basics/04-react-todos-app.html">
+            
+                <a href="../basics/04-react-todos-app.html">
+            
+                    
+                    04-React+Kbone 实现 Todos App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../basics/05-Kbone-Vue项目搭建流程.html">
+            
+                <a href="../basics/05-Kbone-Vue项目搭建流程.html">
+            
+                    
+                    05-Kbone+Vue 项目手工搭建流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../basics/06-Kbone-React项目搭建流程.html">
+            
+                <a href="../basics/06-Kbone-React项目搭建流程.html">
+            
+                    
+                    06-Kbone+React 项目手工搭建流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    高级
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01-环境判断.html">
+            
+                <a href="01-环境判断.html">
+            
+                    
+                    01-环境判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="02-多页开发.html">
+            
+                <a href="02-多页开发.html">
+            
+                    
+                    02-多页开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="03-使用小程序内置组件.html">
+            
+                <a href="03-使用小程序内置组件.html">
+            
+                    
+                    03-使用小程序内置组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="04-使用小程序自定义组件.html">
+            
+                <a href="04-使用小程序自定义组件.html">
+            
+                    
+                    04-使用小程序自定义组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="05-使用rem.html">
+            
+                <a href="05-使用rem.html">
+            
+                    
+                    05-使用rem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="06-自定义app.js和app.css.html">
+            
+                <a href="06-自定义app.js和app.css.html">
+            
+                    
+                    06-自定义app.js和app.css
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="07-扩展dom-bom对象和API.html">
+            
+                <a href="07-扩展dom-bom对象和API.html">
+            
+                    
+                    07-扩展dom-bom对象和API.css
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="08-事件系统.html">
+            
+                <a href="08-事件系统.html">
+            
+                    
+                    08-事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="09-跨页面通信和跨页面数据共享.html">
+            
+                <a href="09-跨页面通信和跨页面数据共享.html">
+            
+                    
+                    09-跨页面通信和跨页面数据共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="10-云开发.html">
+            
+                <a href="10-云开发.html">
+            
+                    
+                    10-云开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="11-echarts.html">
+            
+                <a href="11-echarts.html">
+            
+                    
+                    11-kbone+canvas
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="12-vue+tabbar.html">
+            
+                <a href="12-vue+tabbar.html">
+            
+                    
+                    12-vue+tabbar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="13-subpackages.html">
+            
+                <a href="13-subpackages.html">
+            
+                    
+                    13-subpackages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../architect/01-微信开放社区方案实现与应用效果.html">
+            
+                <a href="../architect/01-微信开放社区方案实现与应用效果.html">
+            
+                    
+                    原理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../architect/00-kbone原理.html">
+            
+                <a href="../architect/00-kbone原理.html">
+            
+                    
+                    01-kbone原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../architect/01-微信开放社区方案实现与应用效果.html">
+            
+                <a href="../architect/01-微信开放社区方案实现与应用效果.html">
+            
+                    
+                    02-微信开放社区方案实现与应用效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../optimization/optimization.html">
+            
+                <a href="../optimization/optimization.html">
+            
+                    
+                    代码优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../suggestion/suggestions.html">
+            
+                <a href="../suggestion/suggestions.html">
+            
+                    
+                    开发建议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../thanks/">
+            
+                <a href="../thanks/">
+            
+                    
+                    感谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >04-使用小程序自定义组件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;"><b></b>&#x4F7F;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</a></li><ul><ul><li><span class="title-icon "></span><a href="#1&#x3001;&#x7528;&#x6CD5;"><b></b>1&#x3001;&#x7528;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#2&#x3001;&#x6848;&#x4F8B;"><b></b>2&#x3001;&#x6848;&#x4F8B;</a></li></ul></ul></ul></div><a href="#&#x4F7F;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4F7F;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;"><a name="&#x4F7F;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4F7F;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#&#x4F7F;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x5C0F;&#x7A0B;&#x5E8F;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</h1>
+<h3 id="1&#x3001;&#x7528;&#x6CD5;"><a name="1&#x3001;&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#x3001;&#x7528;&#x6CD5;" class="plugin-anchor" href="#1&#x3001;&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x7528;&#x6CD5;</h3>
+<p>&#x9700;&#x8981;&#x660E;&#x786E;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Web &#x7AEF;&#x7EC4;&#x4EF6;&#x6280;&#x672F;&#x5B9E;&#x73B0;&#x7684;&#x8BDD;&#x8BF7;&#x5C3D;&#x91CF;&#x4F7F;&#x7528; Web &#x7AEF;&#x6280;&#x672F;&#xFF08;&#x5982; vue&#x3001;react &#x7EC4;&#x4EF6;&#xFF09;&#xFF0C;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x8BF7;&#x6309;&#x9700;&#x4F7F;&#x7528;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x5916;&#x5C42;&#x4F1A;&#x88AB;&#x5305;&#x88F9;&#x4E0A; kbone &#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#xFF0C;&#x800C;&#x5F53;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x5B9E;&#x4F8B;&#x6570;&#x91CF;&#x8FBE;&#x5230;&#x4E00;&#x5B9A;&#x91CF;&#x7EA7;&#x7684;&#x8BDD;&#xFF0C;&#x7406;&#x8BBA;&#x4E0A;&#x662F;&#x4F1A;&#x5BF9;&#x6027;&#x80FD;&#x9020;&#x6210;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x7684;&#x5F71;&#x54CD;&#x3002;</p>
+<p>&#x8981;&#x5728; kbone &#x4E2D;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x6240;&#x6709;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x548C;&#x5176;&#x4F9D;&#x8D56;&#x653E;&#x5230;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x76EE;&#x5F55;&#xFF0C;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x62DF;&#x5B9A;&#xFF0C;&#x5047;&#x8BBE;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E3A; src/custom-components&#xFF1A;</p>
+<h4 id="11-&#x4FEE;&#x6539;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;"><a name="11-&#x4FEE;&#x6539;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#11-&#x4FEE;&#x6539;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="11-&#x4FEE;&#x6539;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;" class="plugin-anchor" href="#11-&#x4FEE;&#x6539;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 &#x4FEE;&#x6539; webpack &#x63D2;&#x4EF6;&#x914D;&#x7F6E;</h4>
+<p>&#x5728; mp-webpack-plugin &#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x4E2D;&#x7684; generate &#x5B57;&#x6BB5;&#x5185;&#x8865;&#x5145; wxCustomComponent&#xFF0C;&#x5176;&#x4E2D; root &#x662F;&#x7EC4;&#x4EF6;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x5373;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684;&#x76EE;&#x5F55;&#xFF1A;src/custom-component&#xFF0C;usingComponents &#x5219;&#x7528;&#x6765;&#x914D;&#x7F6E;&#x8981;&#x7528;&#x5230;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  generate: {
+    wxCustomComponent: {
+      root: path.join(__dirname, <span class="hljs-string">&apos;../src/custom-components&apos;</span>),
+      usingComponents: {
+        <span class="hljs-string">&apos;comp-a&apos;</span>: <span class="hljs-string">&apos;comp-a/index&apos;</span>,
+        <span class="hljs-string">&apos;comp-b&apos;</span>: {
+          path: <span class="hljs-string">&apos;comp-b/index&apos;</span>,
+          props: [<span class="hljs-string">&apos;propa&apos;</span>, <span class="hljs-string">&apos;propb&apos;</span>],
+          events: [<span class="hljs-string">&apos;someevent&apos;</span>],
+        },
+      },
+    },
+  },
+  <span class="hljs-comment">// ... other options</span>
+}
+</code></pre>
+<p>usingComponents &#x91CC;&#x7684;&#x58F0;&#x660E;&#x548C;&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x7684; usingComponents &#x5B57;&#x6BB5;&#x7C7B;&#x4F3C;&#x3002;&#x952E;&#x4E3A;&#x7EC4;&#x4EF6;&#x540D;&#xFF0C;&#x503C;&#x53EF;&#x4EE5;&#x4E3A;&#x7EC4;&#x4EF6;&#x76F8;&#x5BF9; root &#x5B57;&#x6BB5;&#x7684;&#x8DEF;&#x5F84;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x5BF9;&#x8C61;&#x7684; path &#x4E3A;&#x7EC4;&#x4EF6;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;props &#x8868;&#x793A;&#x8981;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4F1A;&#x88AB;&#x7528;&#x5230;&#x7684; properties&#xFF0C;events &#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4F1A;&#x88AB;&#x76D1;&#x542C;&#x5230;&#x7684;&#x4E8B;&#x4EF6;&#x3002;</p>
+<h4 id="12-&#x5C06;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x653E;&#x5165;&#x7EC4;&#x4EF6;&#x6839;&#x76EE;&#x5F55;"><a name="12-&#x5C06;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x653E;&#x5165;&#x7EC4;&#x4EF6;&#x6839;&#x76EE;&#x5F55;" class="anchor-navigation-ex-anchor" href="#12-&#x5C06;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x653E;&#x5165;&#x7EC4;&#x4EF6;&#x6839;&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="12-&#x5C06;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x653E;&#x5165;&#x7EC4;&#x4EF6;&#x6839;&#x76EE;&#x5F55;" class="plugin-anchor" href="#12-&#x5C06;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x653E;&#x5165;&#x7EC4;&#x4EF6;&#x6839;&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 &#x5C06;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x653E;&#x5165;&#x7EC4;&#x4EF6;&#x6839;&#x76EE;&#x5F55;</h4>
+<p>&#x4E0B;&#x9762;&#x4EE5; comp-b &#x7EC4;&#x4EF6;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- comp-b.wxml --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>comp-b<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>propa: {{propa}} -- propb: {{propb}}<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onTap&quot;</span>&gt;</span>click me<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// comp-b.js</span>
+Component({
+  properties: {
+  propa: {type: <span class="hljs-built_in">String</span>, value: <span class="hljs-string">&apos;&apos;</span>},
+  propb: {type: <span class="hljs-built_in">String</span>, value: <span class="hljs-string">&apos;&apos;</span>},
+  },
+  methods: {
+  onTap() {
+    <span class="hljs-keyword">this</span>.triggerEvent(<span class="hljs-string">&apos;someevent&apos;</span>)
+  },
+  },
+})
+</code></pre>
+<h4 id="13-&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;"><a name="13-&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#13-&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="13-&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#13-&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 &#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</h4>
+<p>&#x5047;&#x8BBE;&#x4F7F;&#x7528; vue &#x6280;&#x672F;&#xFF0C;&#x7136;&#x540E;&#x4E0B;&#x9762;&#x540C;&#x6837;&#x4EE5; comp-b &#x7EC4;&#x4EF6;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-vue">&lt;template&gt;
+  &lt;div&gt;
+  &lt;comp-b :propa=&quot;propa&quot; :propb=&quot;propb&quot; @someevent=&quot;onEvent&quot;&gt;
+    &lt;div&gt;comp-b slot&lt;/div&gt;
+  &lt;/comp-b&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  data() {
+  return {propa: &apos;propa-value&apos;, propb: &apos;propb-value&apos;}
+  },
+  methods: {
+  onEvent(evt) {
+    console.log(&apos;someevent&apos;, evt)
+  },
+  },
+}
+&lt;/script&gt;
+</code></pre>
+<blockquote>
+<p>PS&#xFF1A;&#x5982;&#x679C;&#x4F7F;&#x7528; react &#x7B49;&#x5176;&#x4ED6;&#x6846;&#x67B6;&#x5176;&#x5B9E;&#x548C; vue &#x540C;&#x7406;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x7684;&#x5E95;&#x5C42;&#x90FD;&#x662F;&#x8C03;&#x7528; document.createElement &#x6765;&#x521B;&#x5EFA;&#x8282;&#x70B9;&#x3002;&#x5F53;&#x5728; webpack &#x63D2;&#x4EF6;&#x914D;&#x7F6E;&#x58F0;&#x660E;&#x4E86;&#x8FD9;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5728;&#x8C03;&#x7528; document.createElement &#x521B;&#x5EFA;&#x8BE5;&#x8282;&#x70B9;&#x65F6;&#x4F1A;&#x88AB;&#x8F6C;&#x6362;&#x6210;&#x521B;&#x5EFA; wx-custom-component &#x6807;&#x7B7E;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x5185;&#x7F6E;&#x7EC4;&#x4EF6;&#x7684; wx-component &#x6807;&#x7B7E;&#x3002;</p>
+</blockquote>
+<h3 id="2&#x3001;&#x6848;&#x4F8B;"><a name="2&#x3001;&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#x3001;&#x6848;&#x4F8B;" class="plugin-anchor" href="#2&#x3001;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x6848;&#x4F8B;</h3>
+<p>&#x5728; <code>kbone-advanced</code> &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>04-custom-components</code> &#x76EE;&#x5F55;&#x3002;&#x672C;&#x6848;&#x4F8B;&#x5728;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x5B9E;&#x73B0;&#x3002;</p>
+<h4 id="21-&#x521B;&#x5EFA;-packagejson"><a name="21-&#x521B;&#x5EFA;-packagejson" class="anchor-navigation-ex-anchor" href="#21-&#x521B;&#x5EFA;-packagejson"><i class="fa fa-link" aria-hidden="true"></i></a><a name="21-&#x521B;&#x5EFA;-packagejson" class="plugin-anchor" href="#21-&#x521B;&#x5EFA;-packagejson"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 &#x521B;&#x5EFA; package.json</h4>
+<pre><code>cd 04-custom-components
+npm init -y
+</code></pre><p>&#x7F16;&#x8F91; package.json&#xFF1A;</p>
+<pre><code class="lang-js">{
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;mp&quot;</span>: <span class="hljs-string">&quot;cross-env NODE_ENV=production webpack --config build/webpack.mp.config.js --progress --hide-modules&quot;</span>
+  },
+  <span class="hljs-string">&quot;dependencies&quot;</span>: {
+    <span class="hljs-string">&quot;vue&quot;</span>: <span class="hljs-string">&quot;^2.5.11&quot;</span>
+  },
+  <span class="hljs-string">&quot;browserslist&quot;</span>: [
+    <span class="hljs-string">&quot;&gt; 1%&quot;</span>,
+    <span class="hljs-string">&quot;last 2 versions&quot;</span>,
+    <span class="hljs-string">&quot;not ie &lt;= 8&quot;</span>
+  ],
+  <span class="hljs-string">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-string">&quot;babel-core&quot;</span>: <span class="hljs-string">&quot;^6.26.0&quot;</span>,
+    <span class="hljs-string">&quot;babel-loader&quot;</span>: <span class="hljs-string">&quot;^7.1.2&quot;</span>,
+    <span class="hljs-string">&quot;babel-preset-env&quot;</span>: <span class="hljs-string">&quot;^1.6.0&quot;</span>,
+    <span class="hljs-string">&quot;babel-preset-stage-3&quot;</span>: <span class="hljs-string">&quot;^6.24.1&quot;</span>,
+    <span class="hljs-string">&quot;cross-env&quot;</span>: <span class="hljs-string">&quot;^5.0.5&quot;</span>,
+    <span class="hljs-string">&quot;css-loader&quot;</span>: <span class="hljs-string">&quot;^0.28.7&quot;</span>,
+    <span class="hljs-string">&quot;extract-text-webpack-plugin&quot;</span>: <span class="hljs-string">&quot;^3.0.2&quot;</span>,
+    <span class="hljs-string">&quot;file-loader&quot;</span>: <span class="hljs-string">&quot;^1.1.4&quot;</span>,
+    <span class="hljs-string">&quot;html-webpack-plugin&quot;</span>: <span class="hljs-string">&quot;^4.0.0-beta.5&quot;</span>,
+    <span class="hljs-string">&quot;mini-css-extract-plugin&quot;</span>: <span class="hljs-string">&quot;^0.5.0&quot;</span>,
+    <span class="hljs-string">&quot;mp-webpack-plugin&quot;</span>: <span class="hljs-string">&quot;latest&quot;</span>,
+    <span class="hljs-string">&quot;optimize-css-assets-webpack-plugin&quot;</span>: <span class="hljs-string">&quot;^5.0.1&quot;</span>,
+    <span class="hljs-string">&quot;stylehacks&quot;</span>: <span class="hljs-string">&quot;^4.0.3&quot;</span>,
+    <span class="hljs-string">&quot;vue-loader&quot;</span>: <span class="hljs-string">&quot;^15.7.0&quot;</span>,
+    <span class="hljs-string">&quot;vue-template-compiler&quot;</span>: <span class="hljs-string">&quot;^2.6.10&quot;</span>,
+    <span class="hljs-string">&quot;webpack&quot;</span>: <span class="hljs-string">&quot;^4.29.6&quot;</span>,
+    <span class="hljs-string">&quot;webpack-cli&quot;</span>: <span class="hljs-string">&quot;^3.2.3&quot;</span>
+  }
+}
+</code></pre>
+<p>&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5305;&#xFF1A;</p>
+<pre><code>npm install
+</code></pre><h4 id="22-&#x914D;&#x7F6E;-webpack"><a name="22-&#x914D;&#x7F6E;-webpack" class="anchor-navigation-ex-anchor" href="#22-&#x914D;&#x7F6E;-webpack"><i class="fa fa-link" aria-hidden="true"></i></a><a name="22-&#x914D;&#x7F6E;-webpack" class="plugin-anchor" href="#22-&#x914D;&#x7F6E;-webpack"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 &#x914D;&#x7F6E; webpack</h4>
+<p>&#x5728; <code>04-custom-components</code> &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>build</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5728;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA; <code>webpack.mp.config.js</code> &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+<span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>)
+<span class="hljs-keyword">const</span> MiniCssExtractPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mini-css-extract-plugin&apos;</span>)
+<span class="hljs-keyword">const</span> { VueLoaderPlugin } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;vue-loader&apos;</span>)
+<span class="hljs-keyword">const</span> OptimizeCSSAssetsPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;optimize-css-assets-webpack-plugin&apos;</span>);
+<span class="hljs-keyword">const</span> TerserPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;terser-webpack-plugin&apos;</span>)
+<span class="hljs-keyword">const</span> MpPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mp-webpack-plugin&apos;</span>) <span class="hljs-comment">// &#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x5C0F;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x7684; webpack &#x63D2;&#x4EF6;</span>
+
+<span class="hljs-keyword">const</span> isOptimize = <span class="hljs-literal">false</span> <span class="hljs-comment">// &#x662F;&#x5426;&#x538B;&#x7F29;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x5DE5;&#x5177;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x5B8C;&#x7F8E;&#x652F;&#x6301;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x4F7F;&#x7528;&#x5230;&#x7684; es &#x7279;&#x6027;&#xFF0C;&#x5EFA;&#x8BAE;&#x81EA;&#x5DF1;&#x505A;&#x4EE3;&#x7801;&#x538B;&#x7F29;</span>
+
+<span class="hljs-built_in">module</span>.exports = {
+  mode: <span class="hljs-string">&apos;production&apos;</span>,
+  entry: {
+    index: path.resolve(__dirname, <span class="hljs-string">&apos;../src/index/main.mp.js&apos;</span>),
+  },
+  output: {
+    path: path.resolve(__dirname, <span class="hljs-string">&apos;../dist/mp/common&apos;</span>), <span class="hljs-comment">// &#x653E;&#x5230;&#x5C0F;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x76EE;&#x5F55;&#x4E2D;&#x7684; common &#x76EE;&#x5F55;&#x4E0B;</span>
+    filename: <span class="hljs-string">&apos;[name].js&apos;</span>, <span class="hljs-comment">// &#x5FC5;&#x9700;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</span>
+    library: <span class="hljs-string">&apos;createApp&apos;</span>, <span class="hljs-comment">// &#x5FC5;&#x9700;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</span>
+    libraryExport: <span class="hljs-string">&apos;default&apos;</span>, <span class="hljs-comment">// &#x5FC5;&#x9700;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</span>
+    libraryTarget: <span class="hljs-string">&apos;window&apos;</span>, <span class="hljs-comment">// &#x5FC5;&#x9700;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</span>
+  },
+  target: <span class="hljs-string">&apos;web&apos;</span>, <span class="hljs-comment">// &#x5FC5;&#x9700;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</span>
+  optimization: {
+    runtimeChunk: <span class="hljs-literal">false</span>, <span class="hljs-comment">// &#x5FC5;&#x9700;&#x5B57;&#x6BB5;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</span>
+    splitChunks: { <span class="hljs-comment">// &#x4EE3;&#x7801;&#x5206;&#x9694;&#x914D;&#x7F6E;&#xFF0C;&#x4E0D;&#x5EFA;&#x8BAE;&#x4FEE;&#x6539;</span>
+      chunks: <span class="hljs-string">&apos;all&apos;</span>,
+      minSize: <span class="hljs-number">1000</span>,
+      maxSize: <span class="hljs-number">0</span>,
+      minChunks: <span class="hljs-number">1</span>,
+      maxAsyncRequests: <span class="hljs-number">100</span>,
+      maxInitialRequests: <span class="hljs-number">100</span>,
+      automaticNameDelimiter: <span class="hljs-string">&apos;~&apos;</span>,
+      name: <span class="hljs-literal">true</span>,
+      cacheGroups: {
+        vendors: {
+          test: <span class="hljs-regexp">/[\\/]node_modules[\\/]/</span>,
+          priority: <span class="hljs-number">-10</span>
+        },
+        <span class="hljs-keyword">default</span>: {
+          minChunks: <span class="hljs-number">2</span>,
+          priority: <span class="hljs-number">-20</span>,
+          reuseExistingChunk: <span class="hljs-literal">true</span>
+        }
+      }
+    },
+
+    minimizer: isOptimize ? [
+      <span class="hljs-comment">// &#x538B;&#x7F29;CSS</span>
+      <span class="hljs-keyword">new</span> OptimizeCSSAssetsPlugin({
+        assetNameRegExp: <span class="hljs-regexp">/\.(css|wxss)$/g</span>,
+        cssProcessor: <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cssnano&apos;</span>),
+        cssProcessorPluginOptions: {
+          preset: [<span class="hljs-string">&apos;default&apos;</span>, {
+            discardComments: {
+              removeAll: <span class="hljs-literal">true</span>,
+            },
+            minifySelectors: <span class="hljs-literal">false</span>, <span class="hljs-comment">// &#x56E0;&#x4E3A; wxss &#x7F16;&#x8BD1;&#x5668;&#x4E0D;&#x652F;&#x6301; .some&gt;:first-child &#x8FD9;&#x6837;&#x683C;&#x5F0F;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6240;&#x4EE5;&#x6682;&#x65F6;&#x7981;&#x6389;&#x8FD9;&#x4E2A;</span>
+          }],
+        },
+        canPrint: <span class="hljs-literal">false</span>
+      }),
+      <span class="hljs-comment">// &#x538B;&#x7F29; js</span>
+      <span class="hljs-keyword">new</span> TerserPlugin({
+        test: <span class="hljs-regexp">/\.js(\?.*)?$/i</span>,
+        parallel: <span class="hljs-literal">true</span>,
+      })
+    ] : [],
+  },
+  <span class="hljs-built_in">module</span>: {
+    rules: [
+      {
+        test: <span class="hljs-regexp">/\.css$/</span>,
+        use: [
+          MiniCssExtractPlugin.loader,
+          <span class="hljs-string">&apos;css-loader&apos;</span>
+        ],
+      },
+      {
+        test: <span class="hljs-regexp">/\.vue$/</span>,
+        loader: <span class="hljs-string">&apos;vue-loader&apos;</span>,
+      },
+      {
+        test: <span class="hljs-regexp">/\.js$/</span>,
+        use: [
+          <span class="hljs-string">&apos;babel-loader&apos;</span>
+        ],
+        exclude: <span class="hljs-regexp">/node_modules/</span>
+      },
+      {
+        test: <span class="hljs-regexp">/\.(png|jpg|gif|svg)$/</span>,
+        loader: <span class="hljs-string">&apos;file-loader&apos;</span>,
+        options: {
+          name: <span class="hljs-string">&apos;[name].[ext]?[hash]&apos;</span>
+        }
+      }
+    ]
+  },
+  resolve: {
+    extensions: [<span class="hljs-string">&apos;*&apos;</span>, <span class="hljs-string">&apos;.js&apos;</span>, <span class="hljs-string">&apos;.vue&apos;</span>, <span class="hljs-string">&apos;.json&apos;</span>]
+  },
+  plugins: [
+    <span class="hljs-keyword">new</span> webpack.DefinePlugin({
+      <span class="hljs-string">&apos;process.env.isMiniprogram&apos;</span>: process.env.isMiniprogram, <span class="hljs-comment">// &#x6CE8;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x7528;&#x4E8E;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x5224;&#x65AD;</span>
+    }),
+    <span class="hljs-keyword">new</span> MiniCssExtractPlugin({
+      filename: <span class="hljs-string">&apos;[name].wxss&apos;</span>,
+    }),
+    <span class="hljs-keyword">new</span> VueLoaderPlugin(),
+    <span class="hljs-keyword">new</span> MpPlugin(<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./miniprogram.config.js&apos;</span>)),
+  ],
+}
+</code></pre>
+<p>&#x5728; <code>04-custom-components/build</code> &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA; <code>miniprogram.config.js</code> &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+
+<span class="hljs-built_in">module</span>.exports = {
+    origin: <span class="hljs-string">&apos;https://test.miniprogram.com&apos;</span>,
+    entry: <span class="hljs-string">&apos;/&apos;</span>,
+    router: {
+        index: [<span class="hljs-string">&apos;/&apos;</span>],
+    },
+    redirect: {    
+        notFound: <span class="hljs-string">&apos;index&apos;</span>,    
+        accessDenied: <span class="hljs-string">&apos;index&apos;</span>,
+    },
+    generate: {
+        wxCustomComponent: {
+            root: path.join(__dirname, <span class="hljs-string">&apos;../src/custom-components&apos;</span>),
+            usingComponents: {
+                <span class="hljs-string">&apos;comp-a&apos;</span>: {
+                    path: <span class="hljs-string">&apos;comp-a&apos;</span>,
+                    props: [<span class="hljs-string">&apos;prefix&apos;</span>, <span class="hljs-string">&apos;suffix&apos;</span>],
+                    events: [<span class="hljs-string">&apos;someevent&apos;</span>],
+                },
+                <span class="hljs-string">&apos;comp-b&apos;</span>: {
+                    path: <span class="hljs-string">&apos;comp-b/index&apos;</span>,
+                    props: [<span class="hljs-string">&apos;prefix&apos;</span>],
+                },
+                <span class="hljs-string">&apos;comp-c&apos;</span>: <span class="hljs-string">&apos;comp-c&apos;</span>,
+            },
+    },
+    <span class="hljs-comment">// &#x6784;&#x5EFA;&#x5B8C;&#x6210;&#x540E;&#x662F;&#x5426;&#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x5C0F;&#x7A0B;&#x5E8F;&#x4F9D;&#x8D56;&#x3002;&apos;npm&apos;&#xFF1A;&#x4F7F;&#x7528; npm &#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;</span>
+        autoBuildNpm: <span class="hljs-string">&apos;npm&apos;</span>
+    },
+    app: {
+        navigationBarTitleText: <span class="hljs-string">&apos;miniprogram-project&apos;</span>,
+    },
+    projectConfig: {
+        appid: <span class="hljs-string">&apos;&apos;</span>,
+    projectname: <span class="hljs-string">&apos;custom-components&apos;</span>,
+    },
+    packageConfig: {
+        author: <span class="hljs-string">&apos;Felixlu&apos;</span>,
+    },
+}
+</code></pre>
+<h4 id="23-&#x7F16;&#x5199;&#x6848;&#x4F8B;&#x6709;&#x5173;&#x7EC4;&#x4EF6;"><a name="23-&#x7F16;&#x5199;&#x6848;&#x4F8B;&#x6709;&#x5173;&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#23-&#x7F16;&#x5199;&#x6848;&#x4F8B;&#x6709;&#x5173;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="23-&#x7F16;&#x5199;&#x6848;&#x4F8B;&#x6709;&#x5173;&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#23-&#x7F16;&#x5199;&#x6848;&#x4F8B;&#x6709;&#x5173;&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 &#x7F16;&#x5199;&#x6848;&#x4F8B;&#x6709;&#x5173;&#x7EC4;&#x4EF6;</h4>
+<h5 id="231-&#x521B;&#x5EFA;-mainmpjs"><a name="231-&#x521B;&#x5EFA;-mainmpjs" class="anchor-navigation-ex-anchor" href="#231-&#x521B;&#x5EFA;-mainmpjs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="231-&#x521B;&#x5EFA;-mainmpjs" class="plugin-anchor" href="#231-&#x521B;&#x5EFA;-mainmpjs"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.1 &#x521B;&#x5EFA; main.mp.js</h5>
+<p>&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>/src/index</code>&#xFF0C;&#x5728; <code>index</code> &#x4E0B;&#x521B;&#x5EFA; <code>main.mp.js</code> &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
+<span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./App.vue&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createApp</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> container = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;div&apos;</span>)
+  container.id = <span class="hljs-string">&apos;app&apos;</span>
+  <span class="hljs-built_in">document</span>.body.appendChild(container)
+
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Vue({
+    el: <span class="hljs-string">&apos;#app&apos;</span>,
+    render: h =&gt; h(App)
+  })
+}
+</code></pre>
+<h5 id="232-&#x521B;&#x5EFA;-appvue-&#x7EC4;&#x4EF6;"><a name="232-&#x521B;&#x5EFA;-appvue-&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#232-&#x521B;&#x5EFA;-appvue-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="232-&#x521B;&#x5EFA;-appvue-&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#232-&#x521B;&#x5EFA;-appvue-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.2 &#x521B;&#x5EFA; App.vue &#x7EC4;&#x4EF6;</h5>
+<p>&#x5728; <code>/src/index</code> &#x4E0B;&#x521B;&#x5EFA; <code>App.vue</code> &#x7EC4;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-vue">&lt;template&gt;
+  &lt;div class=&quot;cnt&quot;&gt;
+    &lt;h2&gt;kbone&lt;/h2&gt;
+    &lt;comp-a ref=&quot;compA&quot; class=&quot;block&quot; :prefix=&quot;prefixA&quot; :suffix=&quot;suffixA&quot; @someevent=&quot;onEvent&quot;&gt;
+      &lt;div&gt;comp-a slot&lt;/div&gt;
+    &lt;/comp-a&gt;
+    &lt;comp-b class=&quot;block&quot; :prefix=&quot;prefixB&quot;&gt;
+      &lt;div&gt;comp-b slot&lt;/div&gt;
+    &lt;/comp-b&gt;
+    &lt;comp-c class=&quot;block&quot;&gt;
+      &lt;div&gt;comp-c slot&lt;/div&gt;
+    &lt;/comp-c&gt;
+    &lt;button class=&quot;btn&quot; @click=&quot;onClick&quot;&gt;update&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: &apos;App&apos;,
+  data() {
+    return {
+      suffixA: &apos;suffix-a&apos;,
+      prefixB: &apos;prefix-b&apos;,
+    }
+  },
+  methods: {
+    onClick() {
+      this.prefixA = &apos;prefix-new-a&apos;
+      this.prefixB = &apos;prefix-new-b&apos;
+
+      this.$refs.compA._wxCustomComponent.printf()
+    },
+
+    onEvent(evt) {
+      console.log(&apos;someevent&apos;, evt)
+    },
+  },
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+.cnt {
+  margin: 15px;
+}
+
+.block {
+  border: 1px solid #ddd;
+  padding: 15px;
+  box-sizing: content-box;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.btn {
+  margin-top: 15px;
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #ddd;
+}
+&lt;/style&gt;
+</code></pre>
+<h5 id="233-&#x521B;&#x5EFA;-comp-a-&#x7EC4;&#x4EF6;"><a name="233-&#x521B;&#x5EFA;-comp-a-&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#233-&#x521B;&#x5EFA;-comp-a-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="233-&#x521B;&#x5EFA;-comp-a-&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#233-&#x521B;&#x5EFA;-comp-a-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.3 &#x521B;&#x5EFA; comp-a &#x7EC4;&#x4EF6;</h5>
+<p>&#x5728;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>/src/custom-components</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA;&#x5C0F;&#x7A0B;&#x5E8F;&#x539F;&#x751F;&#x7EC4;&#x4EF6; <code>comp-a</code>&#xFF0C;&#x56DB;&#x4E2A;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>/src/custom-components/comp-a.wxml</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>comp-a<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">bindtap</span>=<span class="hljs-string">&quot;onTap&quot;</span>&gt;</span>comp-a button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;prefix&quot;</span>&gt;</span>{{prefix}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>-{{str}}-<span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;suffix&quot;</span>&gt;</span>{{suffix}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
+</code></pre>
+<p>/src/custom-components/comp-a.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./common/utils&apos;</span>)
+
+Component({
+  properties: {
+    prefix: {
+      type: <span class="hljs-built_in">String</span>,
+      value: <span class="hljs-string">&apos;defaultPrefix&apos;</span>,
+    },
+    suffix: {
+      type: <span class="hljs-built_in">String</span>,
+      value: <span class="hljs-string">&apos;defaultSuffix&apos;</span>,
+    },
+  },
+  data: {
+    str: _.getWords() + <span class="hljs-string">&apos;comp-a&apos;</span>,
+  },
+  methods: {
+    onTap() {
+      <span class="hljs-keyword">this</span>.triggerEvent(<span class="hljs-string">&apos;someevent&apos;</span>, {
+        detail: {
+          <span class="hljs-keyword">from</span>: <span class="hljs-string">&apos;comp-a&apos;</span>,
+        },
+      })
+    },
+
+    printf() {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;I am comp-a&apos;</span>)
+    },
+  },
+})
+</code></pre>
+<p>/src/custom-components/common/utils.js</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
+  getWords() {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Hello, &apos;</span>
+  },
+}
+</code></pre>
+<p>/src/custom-components/comp-a.json</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<p>/src/custom-components/comp-a.wxss</p>
+<pre><code>// &#x5185;&#x5BB9;&#x4E3A;&#x7A7A;
+</code></pre><h5 id="234-&#x521B;&#x5EFA;-comp-b-&#x7EC4;&#x4EF6;"><a name="234-&#x521B;&#x5EFA;-comp-b-&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#234-&#x521B;&#x5EFA;-comp-b-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="234-&#x521B;&#x5EFA;-comp-b-&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#234-&#x521B;&#x5EFA;-comp-b-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.4 &#x521B;&#x5EFA; comp-b &#x7EC4;&#x4EF6;</h5>
+<p>&#x5728;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>/src/custom-components/comp-b</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA;&#x5C0F;&#x7A0B;&#x5E8F;&#x539F;&#x751F;&#x7EC4;&#x4EF6; <code>comp-b</code>&#xFF0C;&#x56DB;&#x4E2A;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>/src/custom-components/comp-b/index.wxml</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>comp-b<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;prefix&quot;</span>&gt;</span>{{prefix}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span>-{{str}}-<span class="hljs-tag">&lt;<span class="hljs-name">text</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;suffix&quot;</span>&gt;</span>{{suffix}}<span class="hljs-tag">&lt;/<span class="hljs-name">text</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
+</code></pre>
+<p>/src/custom-components/comp-b/index.js</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../common/utils&apos;</span>)
+
+Component({
+  properties: {
+    prefix: {
+      type: <span class="hljs-built_in">String</span>,
+      value: <span class="hljs-string">&apos;defaultPrefix&apos;</span>,
+    },
+    suffix: {
+      type: <span class="hljs-built_in">String</span>,
+      value: <span class="hljs-string">&apos;defaultSuffix&apos;</span>,
+    },
+  },
+  data: {
+    str: _.getWords() + <span class="hljs-string">&apos;comp-b&apos;</span>,
+  },
+})
+</code></pre>
+<p>/src/custom-components/comp-b/index.json</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<p>/src/custom-components/comp-b/index.wxss</p>
+<pre><code class="lang-css"><span class="hljs-selector-class">.prefix</span>, <span class="hljs-selector-class">.suffix</span> {
+  <span class="hljs-attribute">color</span>: green;
+}
+</code></pre>
+<h5 id="235-&#x521B;&#x5EFA;-comp-c-&#x7EC4;&#x4EF6;"><a name="235-&#x521B;&#x5EFA;-comp-c-&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#235-&#x521B;&#x5EFA;-comp-c-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="235-&#x521B;&#x5EFA;-comp-c-&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#235-&#x521B;&#x5EFA;-comp-c-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.5 &#x521B;&#x5EFA; comp-c &#x7EC4;&#x4EF6;</h5>
+<p>&#x5728; <code>/src/custom-components</code> &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA;&#x5C0F;&#x7A0B;&#x5E8F;&#x539F;&#x751F;&#x7EC4;&#x4EF6; <code>comp-c</code>&#xFF0C;&#x56DB;&#x4E2A;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>/src/custom-components/comp-c.wxml</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>comp-c<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">comp-d</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>comp-d slot<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">comp-d</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
+</code></pre>
+<p>/src/custom-components/comp-c.js</p>
+<pre><code class="lang-js">Component({})
+</code></pre>
+<p>/src/custom-components/comp-c.json</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;usingComponents&quot;</span>: {
+    <span class="hljs-string">&quot;comp-d&quot;</span>: <span class="hljs-string">&quot;./comp-d&quot;</span>
+  }
+}
+</code></pre>
+<p>/src/custom-components/comp-c.wxss</p>
+<pre><code>// &#x5185;&#x5BB9;&#x4E3A;&#x7A7A;
+</code></pre><h5 id="236-&#x521B;&#x5EFA;-comp-d-&#x7EC4;&#x4EF6;"><a name="236-&#x521B;&#x5EFA;-comp-d-&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#236-&#x521B;&#x5EFA;-comp-d-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="236-&#x521B;&#x5EFA;-comp-d-&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#236-&#x521B;&#x5EFA;-comp-d-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.6 &#x521B;&#x5EFA; comp-d &#x7EC4;&#x4EF6;</h5>
+<p>&#x5728; <code>/src/custom-components</code> &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA;&#x5C0F;&#x7A0B;&#x5E8F;&#x539F;&#x751F;&#x7EC4;&#x4EF6; <code>comp-d</code>&#xFF0C;&#x56DB;&#x4E2A;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>/src/custom-components/comp-d.wxml</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>comp-d<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">slot</span>&gt;</span>
+</code></pre>
+<p>/src/custom-components/comp-d.js</p>
+<pre><code class="lang-js">Component({})
+</code></pre>
+<p>/src/custom-components/comp-d.json</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;component&quot;</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<p>/src/custom-components/comp-d.wxss</p>
+<pre><code>// &#x5185;&#x5BB9;&#x4E3A;&#x7A7A;
+</code></pre><h4 id="24-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;"><a name="24-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;" class="anchor-navigation-ex-anchor" href="#24-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="24-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;" class="plugin-anchor" href="#24-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 &#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;</h4>
+<pre><code>npm run mp
+</code></pre><p><img src="images/Snip20200421_1.png" width="400"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03-使用小程序内置组件.html" class="navigation navigation-prev " aria-label="Previous page: 03-使用小程序内置组件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="05-使用rem.html" class="navigation navigation-next " aria-label="Next page: 05-使用rem">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"04-使用小程序自定义组件","level":"1.3.4","depth":2,"next":{"title":"05-使用rem","level":"1.3.5","depth":2,"path":"advanced/05-使用rem.md","ref":"./advanced/05-使用rem.md","articles":[]},"previous":{"title":"03-使用小程序内置组件","level":"1.3.3","depth":2,"path":"advanced/03-使用小程序内置组件.md","ref":"./advanced/03-使用小程序内置组件.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex","favicon","insert-logo"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/lurongtao/felixbooks-kbone"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"lurongtao","repo":"felixbooks-kbone","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"url":"/felixbooks-kbone/images/logo-kbone.png","style":"background: skyblue; width: 100%; height: 100%;"}},"theme":"default","author":"古艺散人","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"千锋大前端小册-Electron","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"Electron 入门与实战"},"file":{"path":"advanced/04-使用小程序自定义组件.md","mtime":"2020-04-23T02:33:29.595Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-29T08:44:39.794Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

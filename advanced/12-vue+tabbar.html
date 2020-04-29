@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>02-多页开发 · 千锋大前端小册-Electron</title>
+        <title>12-vue+tabbar · 千锋大前端小册-Electron</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -69,10 +69,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="03-使用小程序内置组件.html" />
+    <link rel="next" href="13-subpackages.html" />
     
     
-    <link rel="prev" href="01-环境判断.html" />
+    <link rel="prev" href="11-echarts.html" />
     
 
     
@@ -266,7 +266,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2" data-path="02-多页开发.html">
+        <li class="chapter " data-level="1.3.2" data-path="02-多页开发.html">
             
                 <a href="02-多页开发.html">
             
@@ -396,7 +396,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.12" data-path="12-vue+tabbar.html">
+        <li class="chapter active" data-level="1.3.12" data-path="12-vue+tabbar.html">
             
                 <a href="12-vue+tabbar.html">
             
@@ -541,7 +541,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >02-多页开发</a>
+        <a href=".." >12-vue+tabbar</a>
     </h1>
 </div>
 
@@ -556,52 +556,40 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x591A;&#x9875;&#x5F00;&#x53D1;"><b></b>&#x591A;&#x9875;&#x5F00;&#x53D1;</a></li><ul><ul><li><span class="title-icon "></span><a href="#1&#x3001;&#x7528;&#x6CD5;"><b></b>1&#x3001;&#x7528;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#2&#x3001;&#x6848;&#x4F8B;"><b></b>2&#x3001;&#x6848;&#x4F8B;</a></li></ul></ul></ul></div><a href="#&#x591A;&#x9875;&#x5F00;&#x53D1;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x591A;&#x9875;&#x5F00;&#x53D1;"><a name="&#x591A;&#x9875;&#x5F00;&#x53D1;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x9875;&#x5F00;&#x53D1;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x591A;&#x9875;&#x5F00;&#x53D1;" class="plugin-anchor" href="#&#x591A;&#x9875;&#x5F00;&#x53D1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x591A;&#x9875;&#x5F00;&#x53D1;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#vuetabbar"><b></b>vue+tabbar</a></li><ul><ul><li><span class="title-icon "></span><a href="#1&#x3001;&#x7528;&#x6CD5;"><b></b>1&#x3001;&#x7528;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#2&#x3001;&#x6848;&#x4F8B;"><b></b>2&#x3001;&#x6848;&#x4F8B;</a></li></ul></ul></ul></div><a href="#vuetabbar" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="vuetabbar"><a name="vuetabbar" class="anchor-navigation-ex-anchor" href="#vuetabbar"><i class="fa fa-link" aria-hidden="true"></i></a><a name="vuetabbar" class="plugin-anchor" href="#vuetabbar"><i class="fa fa-link" aria-hidden="true"></i></a>vue+tabbar</h1>
+<p>&#x5982;&#x679C;&#x5C0F;&#x7A0B;&#x5E8F;&#x662F;&#x4E00;&#x4E2A;&#x591A; tab &#x5E94;&#x7528;&#xFF08;&#x5BA2;&#x6237;&#x7AEF;&#x7A97;&#x53E3;&#x7684;&#x5E95;&#x90E8;&#x6216;&#x9876;&#x90E8;&#x6709; tab &#x680F;&#x53EF;&#x4EE5;&#x5207;&#x6362;&#x9875;&#x9762;&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; tabBar &#x914D;&#x7F6E;&#x9879;&#x6307;&#x5B9A; tab &#x680F;&#x7684;&#x8868;&#x73B0;&#xFF0C;&#x4EE5;&#x53CA; tab &#x5207;&#x6362;&#x65F6;&#x663E;&#x793A;&#x7684;&#x5BF9;&#x5E94;&#x9875;&#x9762;&#x3002;&#x8BE6;&#x89C1;<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html" target="_blank">&#x5C0F;&#x7A0B;&#x5E8F; tabbar</a></p>
 <h3 id="1&#x3001;&#x7528;&#x6CD5;"><a name="1&#x3001;&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#1&#x3001;&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#x3001;&#x7528;&#x6CD5;" class="plugin-anchor" href="#1&#x3001;&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x7528;&#x6CD5;</h3>
-<p>&#x5BF9;&#x4E8E;&#x591A;&#x9875;&#x9762;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x5728; Web &#x7AEF;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7; a &#x6807;&#x7B7E;&#x6216;&#x8005; location &#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x8DF3;&#x8F6C;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;&#x5219;&#x884C;&#x4E0D;&#x901A;&#xFF1B;&#x540C;&#x65F6; Web &#x7AEF;&#x7684;&#x9875;&#x9762; url &#x5B9E;&#x73B0;&#x548C;&#x5C0F;&#x7A0B;&#x5E8F;&#x9875;&#x9762;&#x8DEF;&#x7531;&#x4E5F;&#x662F;&#x5B8C;&#x5168;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5BF9;&#x4E8E;&#x591A;&#x9875;&#x5F00;&#x53D1;&#x6700;&#x5927;&#x7684;&#x96BE;&#x70B9;&#x5728;&#x4E8E;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#x3002;</p>
-<h4 id="11-&#x4FEE;&#x6539;-webpack-&#x914D;&#x7F6E;"><a name="11-&#x4FEE;&#x6539;-webpack-&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#11-&#x4FEE;&#x6539;-webpack-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="11-&#x4FEE;&#x6539;-webpack-&#x914D;&#x7F6E;" class="plugin-anchor" href="#11-&#x4FEE;&#x6539;-webpack-&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 &#x4FEE;&#x6539; webpack &#x914D;&#x7F6E;</h4>
-<p>&#x5BF9;&#x4E8E;&#x591A;&#x9875;&#x5E94;&#x7528;&#xFF0C;&#x6B64;&#x5904;&#x548C; Web &#x7AEF;&#x4E00;&#x81F4;&#xFF0C;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x9875;&#x9762;&#x5C31;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x591A;&#x5C11;&#x4E2A;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x3002;&#x5982;&#x4E0B;&#x4F8B;&#x5B50;&#xFF0C;&#x8FD9;&#x4E2A;&#x5E94;&#x7528;&#x4E2D;&#x5305;&#x542B; page1&#x3001;page2 &#x548C; page2 &#x4E09;&#x4E2A;&#x9875;&#x9762;&#xFF1A;</p>
-<pre><code class="lang-js"><span class="hljs-comment">// webpack.mp.config.js</span>
-<span class="hljs-built_in">module</span>.exports = {
-  entry: {
-    page1: path.resolve(__dirname, <span class="hljs-string">&apos;../src/page1/main.mp.js&apos;</span>),
-    page2: path.resolve(__dirname, <span class="hljs-string">&apos;../src/page2/main.mp.js&apos;</span>),
-    page3: path.resolve(__dirname, <span class="hljs-string">&apos;../src/page3/main.mp.js&apos;</span>),
+<p>&#x5728; kbone &#x4E2D;&#x5B9A;&#x5236;&#x539F;&#x751F;&#x5C0F;&#x7A0B;&#x5E8F;&#x7684; tabbar, &#x9700;&#x8981;&#x914D;&#x7F6E; <code>miniprogram.config</code> &#x7684; generate.tabBar&#xFF0C;&#x5177;&#x4F53;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js">generate: {
+  tabBar: {
+    color: <span class="hljs-string">&apos;#000000&apos;</span>,
+    selectedColor: <span class="hljs-string">&apos;#07c160&apos;</span>,
+    backgroundColor: <span class="hljs-string">&apos;#ffffff&apos;</span>,
+    list: [{
+      pageName: <span class="hljs-string">&apos;page1&apos;</span>,
+      text: <span class="hljs-string">&apos;page1&apos;</span>,
+      iconPath: path.resolve(__dirname, <span class="hljs-string">&apos;../src/img/page1.png&apos;</span>),
+      selectedIconPath: path.resolve(__dirname, <span class="hljs-string">&apos;../src/img/page1-sel.png&apos;</span>),
+    }, {
+      pageName: <span class="hljs-string">&apos;page2&apos;</span>,
+      text: <span class="hljs-string">&apos;page2&apos;</span>,
+      iconPath: path.resolve(__dirname, <span class="hljs-string">&apos;../src/img/page2.png&apos;</span>),
+      selectedIconPath: path.resolve(__dirname, <span class="hljs-string">&apos;../src/img/page2-sel.png&apos;</span>),
+    }],
   },
-  <span class="hljs-comment">// ... other options</span>
-}
+},
 </code></pre>
-<h4 id="12-&#x4FEE;&#x6539;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;"><a name="12-&#x4FEE;&#x6539;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#12-&#x4FEE;&#x6539;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="12-&#x4FEE;&#x6539;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;" class="plugin-anchor" href="#12-&#x4FEE;&#x6539;-webpack-&#x63D2;&#x4EF6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 &#x4FEE;&#x6539; webpack &#x63D2;&#x4EF6;&#x914D;&#x7F6E;</h4>
-<p><code>mp-webpack-plugin</code> &#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x540C;&#x6837;&#x9700;&#x8981;&#x8C03;&#x6574;&#xFF0C;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x8005;&#x63D0;&#x4F9B;&#x5404;&#x4E2A;&#x9875;&#x9762;&#x5BF9;&#x5E94;&#x7684; url &#x7ED9; kbone&#x3002;</p>
-<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {
-  origin: <span class="hljs-string">&apos;https://test.miniprogram.com&apos;</span>,
-  entry: <span class="hljs-string">&apos;/page1&apos;</span>,
-  router: {
-    page1: [<span class="hljs-string">&apos;/(home|page1)?&apos;</span>, <span class="hljs-string">&apos;/test/(home|page1)&apos;</span>],
-    page2: [<span class="hljs-string">&apos;/test/page2/:id&apos;</span>],
-    page3: [<span class="hljs-string">&apos;/test/page3/:id&apos;</span>],
-  },
-  <span class="hljs-comment">// ... other options</span>
-}
-</code></pre>
-<p>&#x5176;&#x4E2D; origin &#x5373; window.location.origin &#x5B57;&#x6BB5;&#xFF0C;&#x4F7F;&#x7528; kbone &#x7684;&#x5E94;&#x7528;&#x6240;&#x6709;&#x9875;&#x9762;&#x5FC5;&#x987B;&#x540C;&#x6E90;&#xFF0C;&#x4E0D;&#x540C;&#x6E90;&#x7684;&#x9875;&#x9762;&#x7981;&#x6B62;&#x8BBF;&#x95EE;&#x3002;entry &#x9875;&#x9762;&#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x5E94;&#x7528;&#x7684;&#x5165;&#x53E3; url&#x3002;router &#x914D;&#x7F6E;&#x5219;&#x662F;&#x5404;&#x4E2A;&#x9875;&#x9762;&#x5BF9;&#x5E94;&#x7684; url&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x53EF;&#x80FD;&#x4E0D;&#x6B62;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A; url&#xFF0C;&#x800C;&#x4E14;&#x8FD9;&#x91CC;&#x7684; url &#x652F;&#x6301;&#x53C2;&#x6570;&#x914D;&#x7F6E;&#x3002;</p>
-<p>&#x6709;&#x4E86;&#x4EE5;&#x4E0A;&#x51E0;&#x4E2A;&#x914D;&#x7F6E;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728; kbone &#x5185;&#x4F7F;&#x7528; a &#x6807;&#x7B7E;&#x6216;&#x8005; location &#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x8DF3;&#x8F6C;&#x3002;kbone &#x4F1A;&#x5C06;&#x8981;&#x8DF3;&#x8F6C;&#x7684; url &#x8FDB;&#x884C;&#x89E3;&#x6790;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x914D;&#x7F6E;&#x4E2D;&#x7684; origin &#x548C; router &#x67E5;&#x627E;&#x51FA;&#x5BF9;&#x5E94;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x7136;&#x540E;&#x62FC;&#x51FA;&#x9875;&#x9762;&#x5728;&#x5C0F;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x8DEF;&#x7531;&#xFF0C;&#x6700;&#x540E;&#x901A;&#x8FC7;&#x5C0F;&#x7A0B;&#x5E8F; API &#x8FDB;&#x884C;&#x8DF3;&#x8F6C;&#xFF08;&#x5229;&#x7528; wx.redirectTo &#x7B49;&#x65B9;&#x6CD5;&#xFF09;&#x3002;</p>
 <h3 id="2&#x3001;&#x6848;&#x4F8B;"><a name="2&#x3001;&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#2&#x3001;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#x3001;&#x6848;&#x4F8B;" class="plugin-anchor" href="#2&#x3001;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x6848;&#x4F8B;</h3>
-<p>&#x5728; <code>kbone-advanced</code> &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>02-mulpages</code> &#x76EE;&#x5F55;&#x3002;&#x672C;&#x6848;&#x4F8B;&#x5728;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x5728; <code>kbone-advanced</code> &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>11-vue-tabbar</code> &#x76EE;&#x5F55;&#xFF0C;&#x672C;&#x6848;&#x4F8B;&#x5728;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#x5B8C;&#x6210;&#x3002;</p>
 <h4 id="21-&#x521B;&#x5EFA;-packagejson"><a name="21-&#x521B;&#x5EFA;-packagejson" class="anchor-navigation-ex-anchor" href="#21-&#x521B;&#x5EFA;-packagejson"><i class="fa fa-link" aria-hidden="true"></i></a><a name="21-&#x521B;&#x5EFA;-packagejson" class="plugin-anchor" href="#21-&#x521B;&#x5EFA;-packagejson"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 &#x521B;&#x5EFA; package.json</h4>
-<pre><code>cd 02-mulpages
+<pre><code>cd 11-vue-tabbar
 npm init -y
 </code></pre><p>&#x7F16;&#x8F91; package.json&#xFF1A;</p>
-<pre><code class="lang-js">{
-  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;01-env&quot;</span>,
-  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
-  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
-  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;index.js&quot;</span>,
+<pre><code class="lang-json">{
   <span class="hljs-string">&quot;scripts&quot;</span>: {
     <span class="hljs-string">&quot;mp&quot;</span>: <span class="hljs-string">&quot;cross-env NODE_ENV=production webpack --config build/webpack.mp.config.js --progress --hide-modules&quot;</span>
   },
   <span class="hljs-string">&quot;dependencies&quot;</span>: {
-    <span class="hljs-string">&quot;add&quot;</span>: <span class="hljs-string">&quot;^2.0.6&quot;</span>,
     <span class="hljs-string">&quot;vue&quot;</span>: <span class="hljs-string">&quot;^2.5.11&quot;</span>
   },
   <span class="hljs-string">&quot;browserslist&quot;</span>: [
@@ -613,8 +601,10 @@ npm init -y
     <span class="hljs-string">&quot;babel-core&quot;</span>: <span class="hljs-string">&quot;^6.26.0&quot;</span>,
     <span class="hljs-string">&quot;babel-loader&quot;</span>: <span class="hljs-string">&quot;^7.1.2&quot;</span>,
     <span class="hljs-string">&quot;babel-preset-env&quot;</span>: <span class="hljs-string">&quot;^1.6.0&quot;</span>,
+    <span class="hljs-string">&quot;babel-preset-stage-3&quot;</span>: <span class="hljs-string">&quot;^6.24.1&quot;</span>,
     <span class="hljs-string">&quot;cross-env&quot;</span>: <span class="hljs-string">&quot;^5.0.5&quot;</span>,
     <span class="hljs-string">&quot;css-loader&quot;</span>: <span class="hljs-string">&quot;^0.28.7&quot;</span>,
+    <span class="hljs-string">&quot;extract-text-webpack-plugin&quot;</span>: <span class="hljs-string">&quot;^3.0.2&quot;</span>,
     <span class="hljs-string">&quot;file-loader&quot;</span>: <span class="hljs-string">&quot;^1.1.4&quot;</span>,
     <span class="hljs-string">&quot;html-webpack-plugin&quot;</span>: <span class="hljs-string">&quot;^4.0.0-beta.5&quot;</span>,
     <span class="hljs-string">&quot;mini-css-extract-plugin&quot;</span>: <span class="hljs-string">&quot;^0.5.0&quot;</span>,
@@ -625,16 +615,13 @@ npm init -y
     <span class="hljs-string">&quot;webpack&quot;</span>: <span class="hljs-string">&quot;^4.29.6&quot;</span>,
     <span class="hljs-string">&quot;webpack-cli&quot;</span>: <span class="hljs-string">&quot;^3.2.3&quot;</span>,
     <span class="hljs-string">&quot;mp-webpack-plugin&quot;</span>: <span class="hljs-string">&quot;latest&quot;</span>
-  },
-  <span class="hljs-string">&quot;keywords&quot;</span>: [],
-  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
-  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;ISC&quot;</span>
+  }
 }
 </code></pre>
 <p>&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5305;&#xFF1A;</p>
 <pre><code>npm install
 </code></pre><h4 id="22-&#x914D;&#x7F6E;-webpack"><a name="22-&#x914D;&#x7F6E;-webpack" class="anchor-navigation-ex-anchor" href="#22-&#x914D;&#x7F6E;-webpack"><i class="fa fa-link" aria-hidden="true"></i></a><a name="22-&#x914D;&#x7F6E;-webpack" class="plugin-anchor" href="#22-&#x914D;&#x7F6E;-webpack"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 &#x914D;&#x7F6E; webpack</h4>
-<p>&#x5728; <code>02-mulpages</code> &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; <code>build</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5728;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA; <code>webpack.mp.config.js</code> &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x5728; 11-vue-tabbar/build &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; webpack.mp.config.js&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
 <span class="hljs-keyword">const</span> webpack = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;webpack&apos;</span>)
 <span class="hljs-keyword">const</span> MiniCssExtractPlugin = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mini-css-extract-plugin&apos;</span>)
@@ -723,12 +710,9 @@ npm init -y
       },
       {
         test: <span class="hljs-regexp">/\.js$/</span>,
-        use: {
-          loader: <span class="hljs-string">&apos;babel-loader&apos;</span>,
-          options: {
-            presets: [<span class="hljs-string">&apos;env&apos;</span>]
-          }
-        },
+        use: [
+          <span class="hljs-string">&apos;babel-loader&apos;</span>
+        ],
         exclude: <span class="hljs-regexp">/node_modules/</span>
       },
       {
@@ -740,14 +724,12 @@ npm init -y
       }
     ]
   },
-
   resolve: {
     extensions: [<span class="hljs-string">&apos;*&apos;</span>, <span class="hljs-string">&apos;.js&apos;</span>, <span class="hljs-string">&apos;.vue&apos;</span>, <span class="hljs-string">&apos;.json&apos;</span>]
   },
-
   plugins: [
     <span class="hljs-keyword">new</span> webpack.DefinePlugin({
-      <span class="hljs-string">&apos;process.env.isMiniprogram&apos;</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x6CE8;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x7528;&#x4E8E;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x5224;&#x65AD;</span>
+      <span class="hljs-string">&apos;process.env.isMiniprogram&apos;</span>: process.env.isMiniprogram, <span class="hljs-comment">// &#x6CE8;&#x5165;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x7528;&#x4E8E;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x5224;&#x65AD;</span>
     }),
     <span class="hljs-keyword">new</span> MiniCssExtractPlugin({
       filename: <span class="hljs-string">&apos;[name].wxss&apos;</span>,
@@ -757,8 +739,10 @@ npm init -y
   ],
 }
 </code></pre>
-<p>&#x5728; <code>02-mulpages/build</code> &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA; <code>miniprogram.config.js</code> &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = {    
+<p>&#x5728; 11-vue-tabbar/build &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA; miniprogram.config.js&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+
+<span class="hljs-built_in">module</span>.exports = {    
     origin: <span class="hljs-string">&apos;https://test.miniprogram.com&apos;</span>,    
     entry: <span class="hljs-string">&apos;/&apos;</span>,    
     router: {        
@@ -771,115 +755,38 @@ npm init -y
         accessDenied: <span class="hljs-string">&apos;page1&apos;</span>,
     },
     generate: {
-    appEntry: <span class="hljs-string">&apos;miniprogram-app&apos;</span>,
-    <span class="hljs-comment">// &#x6784;&#x5EFA;&#x5B8C;&#x6210;&#x540E;&#x662F;&#x5426;&#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x5C0F;&#x7A0B;&#x5E8F;&#x4F9D;&#x8D56;&#x3002;&apos;npm&apos;&#xFF1A;&#x4F7F;&#x7528; npm &#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;</span>
-        autoBuildNpm: <span class="hljs-string">&apos;npm&apos;</span>
+        tabBar: {
+      color: <span class="hljs-string">&apos;#000000&apos;</span>,
+      selectedColor: <span class="hljs-string">&apos;#07c160&apos;</span>,
+      backgroundColor: <span class="hljs-string">&apos;#ffffff&apos;</span>,
+      list: [{
+        pageName: <span class="hljs-string">&apos;page1&apos;</span>,
+        text: <span class="hljs-string">&apos;page1&apos;</span>,
+        iconPath: path.resolve(__dirname, <span class="hljs-string">&apos;../src/img/page1.png&apos;</span>),
+        selectedIconPath: path.resolve(__dirname, <span class="hljs-string">&apos;../src/img/page1-sel.png&apos;</span>),
+      }, {
+        pageName: <span class="hljs-string">&apos;page2&apos;</span>,
+        text: <span class="hljs-string">&apos;page2&apos;</span>,
+        iconPath: path.resolve(__dirname, <span class="hljs-string">&apos;../src/img/page2.png&apos;</span>),
+        selectedIconPath: path.resolve(__dirname, <span class="hljs-string">&apos;../src/img/page2-sel.png&apos;</span>),
+      }],
     },
-    runtime: {
-        cookieStore: <span class="hljs-string">&apos;memory&apos;</span>,
+    autoBuildNpm: <span class="hljs-string">&apos;npm&apos;</span>
     },
     app: {
-        navigationBarTitleText: <span class="hljs-string">&apos;kbone-multiple-pages&apos;</span>,
-    },
-    global: {
-        share: <span class="hljs-literal">true</span>,
-    },
-    pages: {
-        page1: {
-            extra: {
-                navigationBarTitleText: <span class="hljs-string">&apos;page1&apos;</span>,
-            },
-        },
+        navigationBarTitleText: <span class="hljs-string">&apos;vue+tabbar&apos;</span>,
     },
     projectConfig: {
         appid: <span class="hljs-string">&apos;&apos;</span>,
-    projectname: <span class="hljs-string">&apos;kbone-multiple-pages&apos;</span>,
+    projectname: <span class="hljs-string">&apos;vue+tabbar&apos;</span>,
     },
     packageConfig: {
-        author: <span class="hljs-string">&apos;Felixlu&apos;</span>,
-    }
+        author: <span class="hljs-string">&apos;wechat-miniprogram&apos;</span>,
+    },
 }
 </code></pre>
-<h4 id="23-&#x7F16;&#x5199;&#x4E09;&#x4E2A;&#x9875;&#x9762;"><a name="23-&#x7F16;&#x5199;&#x4E09;&#x4E2A;&#x9875;&#x9762;" class="anchor-navigation-ex-anchor" href="#23-&#x7F16;&#x5199;&#x4E09;&#x4E2A;&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="23-&#x7F16;&#x5199;&#x4E09;&#x4E2A;&#x9875;&#x9762;" class="plugin-anchor" href="#23-&#x7F16;&#x5199;&#x4E09;&#x4E2A;&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 &#x7F16;&#x5199;&#x4E09;&#x4E2A;&#x9875;&#x9762;</h4>
-<p>&#x5728; <code>/src/</code> &#x4E0B;&#x521B;&#x5EFA; <code>page1</code>, <code>page2</code>, <code>page3</code> &#x4E09;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5728;&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x521B;&#x5EFA;&#x4E09;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x7531; <code>App.vue</code> &#x548C; <code>main.mp.js</code> &#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x7EC4;&#x6210;&#x3002;</p>
-<h5 id="1&#x3001;page1-&#x9875;&#x9762;"><a name="1&#x3001;page1-&#x9875;&#x9762;" class="anchor-navigation-ex-anchor" href="#1&#x3001;page1-&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="1&#x3001;page1-&#x9875;&#x9762;" class="plugin-anchor" href="#1&#x3001;page1-&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;page1 &#x9875;&#x9762;</h5>
-<p><code>/src/page1/App.vue</code> &#x5185;&#x5BB9;&#xFF1A;</p>
-<pre><code class="lang-vue">&lt;template&gt;
-  &lt;div class=&quot;cnt&quot;&gt;
-    &lt;Header&gt;&lt;/Header&gt;
-    &lt;p&gt;&#x5F53;&#x524D; url&#xFF1A;{{url}}&lt;/p&gt;
-    &lt;a href=&quot;/b&quot;&gt;&#x5F53;&#x524D;&#x9875;&#x8DF3;&#x8F6C;&lt;/a&gt;
-    &lt;a href=&quot;/c&quot; target=&quot;_blank&quot;&gt;&#x65B0;&#x5F00;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&lt;/a&gt;
-    &lt;button @click=&quot;onClickJump&quot;&gt;&#x5F53;&#x524D;&#x9875;&#x8DF3;&#x8F6C;&lt;/button&gt;
-    &lt;button @click=&quot;onClickOpen&quot;&gt;&#x65B0;&#x5F00;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&lt;/button&gt;
-    &lt;Footer&gt;&lt;/Footer&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-import Header from &apos;../common/Header.vue&apos;
-import Footer from &apos;../common/Footer.vue&apos;
-export default {
-  name: &apos;App&apos;,
-  components: {
-    Header,
-    Footer
-  },
-  data() {
-    return {
-      url: location.href,
-    }
-  },
-  created() {
-    window.addEventListener(&apos;wxload&apos;, query =&gt; console.log(&apos;page1 wxload&apos;, query))
-    window.addEventListener(&apos;wxshow&apos;, () =&gt; console.log(&apos;page1 wxshow&apos;))
-    window.addEventListener(&apos;wxready&apos;, () =&gt; console.log(&apos;page1 wxready&apos;))
-    window.addEventListener(&apos;wxhide&apos;, () =&gt; console.log(&apos;page1 wxhide&apos;))
-    window.addEventListener(&apos;wxunload&apos;, () =&gt; console.log(&apos;page1 wxunload&apos;))
-    window.onShareAppMessage = () =&gt; {
-      return {
-        title: &apos;kbone-demo&apos;,
-        // path: &apos;/a&apos;, // &#x5F53;&#x524D;&#x9875;&#x9762;
-        // path: &apos;https://test.miniprogram.com/a&apos;, // &#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x5B8C;&#x6574; url
-        // path: &apos;/b&apos;, // &#x5176;&#x4ED6;&#x9875;&#x9762;
-        // path: &apos;https://test.miniprogram.com/b&apos;, // &#x5176;&#x4ED6;&#x9875;&#x9762;&#x7684;&#x5B8C;&#x6574; url
-        miniprogramPath: `/pages/page2/index?type=share&amp;targeturl=${encodeURIComponent(&apos;https://test.miniprogram.com/b&apos;)}`, // &#x81EA;&#x5DF1;&#x7EC4;&#x88C5;&#x5206;&#x4EAB;&#x9875;&#x9762;&#x8DEF;&#x7531;
-      }
-    }
-  },
-  mounted() {
-    // cookie
-    console.log(&apos;before set cookie&apos;, document.cookie)
-    document.cookie = `time=${+new Date()}; expires=Wed Jan 01 2220 00:00:00 GMT+0800; path=/`
-    console.log(&apos;after set cookie&apos;, document.cookie)
-  },
-  methods: {
-    onClickJump() {
-      window.location.href = &apos;/b&apos;
-    },
-    onClickOpen() {
-      window.open(&apos;/c&apos;)
-    },
-  },
-}
-&lt;/script&gt;
-
-&lt;style&gt;
-.cnt {
-  margin-top: 20px;
-}
-a, button {
-  display: block;
-  width: 100%;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  font-size: 20px;
-  border: 1px solid #ddd;
-}
-&lt;/style&gt;
-</code></pre>
-<p><code>/src/page1/main.mp.js</code> &#x5185;&#x5BB9;&#xFF1A;</p>
+<h4 id="23-&#x521B;&#x5EFA;-page1-&#x7EC4;&#x4EF6;"><a name="23-&#x521B;&#x5EFA;-page1-&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#23-&#x521B;&#x5EFA;-page1-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="23-&#x521B;&#x5EFA;-page1-&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#23-&#x521B;&#x5EFA;-page1-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 &#x521B;&#x5EFA; page1 &#x7EC4;&#x4EF6;</h4>
+<p>&#x5728; <code>/src/</code> &#x4E0B;&#x521B;&#x5EFA; <code>page1</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA; <code>main.mp.js</code> &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
 <span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./App.vue&apos;</span>
 
@@ -894,64 +801,14 @@ a, button {
   })
 }
 </code></pre>
-<p><code>/src/common/Header.vue</code> &#x5185;&#x5BB9;&#xFF1A;</p>
-<pre><code class="lang-vue">&lt;template&gt;
-  &lt;div class=&quot;header&quot;&gt;
-    &lt;p&gt;wechat-miniprogram-header&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-import add from &apos;add&apos;
-import { printf } from &apos;./utils&apos;
-export default {
-  mounted() {
-    printf(&apos;I am Header --&gt; &apos; + add([7, 8]))
-  },
-}
-&lt;/script&gt;
-
-&lt;style&gt;
-.header {
-  margin-bottom: 10px;
-  width: 100%;
-  text-align: center;
-}
-&lt;/style&gt;
-</code></pre>
-<p><code>/src/common/utils.js</code> &#x5185;&#x5BB9;&#xFF1A;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printf</span>(<span class="hljs-params">str</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;common/utils.js --&gt; &apos;</span>, str)
-}
-</code></pre>
-<p><code>/src/common/Footer.vue</code> &#x5185;&#x5BB9;&#xFF1A;</p>
-<pre><code class="lang-vue">&lt;template&gt;
-  &lt;div class=&quot;footer&quot;&gt;
-    &lt;p&gt;wechat-miniprogram-footer&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
-
-&lt;script&gt;
-export default {}
-&lt;/script&gt;
-
-&lt;style&gt;
-.footer {
-  margin-top: 10px;
-  width: 100%;
-  text-align: center;
-}
-&lt;/style&gt;
-</code></pre>
-<h5 id="2&#x3001;page2-&#x9875;&#x9762;"><a name="2&#x3001;page2-&#x9875;&#x9762;" class="anchor-navigation-ex-anchor" href="#2&#x3001;page2-&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="2&#x3001;page2-&#x9875;&#x9762;" class="plugin-anchor" href="#2&#x3001;page2-&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;page2 &#x9875;&#x9762;</h5>
-<p><code>/src/page2/App.vue</code> &#x5185;&#x5BB9;&#xFF1A;</p>
+<p>&#x5728; <code>/src/page1</code> &#x4E0B;&#x521B;&#x5EFA; <code>App.vue</code> &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-vue">&lt;template&gt;
   &lt;div class=&quot;cnt&quot;&gt;
     &lt;Header&gt;&lt;/Header&gt;
-    &lt;p&gt;&#x5F53;&#x524D; url&#xFF1A;{{url}}&lt;/p&gt;
-    &lt;a href=&quot;/a&quot;&gt;&#x56DE;&#x5230;&#x9996;&#x9875;&lt;/a&gt;
-    &lt;button @click=&quot;onClickJump&quot;&gt;&#x56DE;&#x5230;&#x9996;&#x9875;&lt;/button&gt;
-    &lt;button @click=&quot;onClickReLaunch&quot;&gt;relaunch&lt;/button&gt;
+    &lt;div class=&quot;content&quot;&gt;page1&lt;/div&gt;
+    &lt;a href=&quot;/b&quot;&gt;&#x8DF3;&#x8F6C; tabbar &#x9875;&#x9762;&lt;/a&gt;
+    &lt;a href=&quot;/c&quot; target=&quot;_blank&quot;&gt;&#x8DF3;&#x8F6C;&#x666E;&#x901A;&#x9875;&#x9762;&lt;/a&gt;
+    &lt;a href=&quot;/d&quot;&gt;&#x8DF3;&#x8F6C;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x9875;&#x9762;&lt;/a&gt;
     &lt;Footer&gt;&lt;/Footer&gt;
   &lt;/div&gt;
 &lt;/template&gt;
@@ -959,39 +816,12 @@ export default {}
 &lt;script&gt;
 import Header from &apos;../common/Header.vue&apos;
 import Footer from &apos;../common/Footer.vue&apos;
+
 export default {
   name: &apos;App&apos;,
   components: {
     Header,
-    Footer
-  },
-  data() {
-    return {
-      url: location.href,
-    }
-  },
-  created() {
-    window.addEventListener(&apos;wxload&apos;, query =&gt; console.log(&apos;page2 wxload&apos;, query))
-    window.addEventListener(&apos;wxshow&apos;, () =&gt; console.log(&apos;page2 wxshow&apos;))
-    window.addEventListener(&apos;wxready&apos;, () =&gt; console.log(&apos;page2 wxready&apos;))
-    window.addEventListener(&apos;wxhide&apos;, () =&gt; console.log(&apos;page2 wxhide&apos;))
-    window.addEventListener(&apos;wxunload&apos;, () =&gt; console.log(&apos;page2 wxunload&apos;))
-    window.onShareAppMessage = () =&gt; {
-      return {
-        title: &apos;kbone-demo&apos;,
-        path: &apos;/a&apos;,
-      }
-    }
-  },
-  methods: {
-    onClickJump() {
-      window.location.href = &apos;/a&apos;
-    },
-    onClickReLaunch() {
-      wx.reLaunch({
-        url: `/pages/page1/index?type=jump&amp;targeturl=${encodeURIComponent(&apos;/a&apos;)}`,
-      })
-    },
+    Footer,
   },
 }
 &lt;/script&gt;
@@ -1000,7 +830,8 @@ export default {
 .cnt {
   margin-top: 20px;
 }
-a, button {
+
+a, button, .content {
   display: block;
   width: 100%;
   height: 30px;
@@ -1011,7 +842,8 @@ a, button {
 }
 &lt;/style&gt;
 </code></pre>
-<p><code>/src/page2/main.mp.js</code> &#x5185;&#x5BB9;&#xFF1A;</p>
+<h4 id="24-&#x521B;&#x5EFA;-page2-&#x7EC4;&#x4EF6;"><a name="24-&#x521B;&#x5EFA;-page2-&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#24-&#x521B;&#x5EFA;-page2-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="24-&#x521B;&#x5EFA;-page2-&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#24-&#x521B;&#x5EFA;-page2-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 &#x521B;&#x5EFA; page2 &#x7EC4;&#x4EF6;</h4>
+<p>&#x5728; <code>/src/</code> &#x4E0B;&#x521B;&#x5EFA; <code>page2</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA; <code>main.mp.js</code> &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
 <span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./App.vue&apos;</span>
 
@@ -1026,14 +858,14 @@ a, button {
   })
 }
 </code></pre>
-<h5 id="3&#x3001;page3-&#x9875;&#x9762;"><a name="3&#x3001;page3-&#x9875;&#x9762;" class="anchor-navigation-ex-anchor" href="#3&#x3001;page3-&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="3&#x3001;page3-&#x9875;&#x9762;" class="plugin-anchor" href="#3&#x3001;page3-&#x9875;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;page3 &#x9875;&#x9762;</h5>
-<p><code>/src/page3/App.vue</code> &#x5185;&#x5BB9;&#xFF1A;</p>
+<p>&#x5728; <code>/src/page2</code> &#x4E0B;&#x521B;&#x5EFA; <code>App.vue</code> &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-vue">&lt;template&gt;
   &lt;div class=&quot;cnt&quot;&gt;
     &lt;Header&gt;&lt;/Header&gt;
-    &lt;p&gt;&#x5F53;&#x524D; url&#xFF1A;{{url}}&lt;/p&gt;
-    &lt;button @click=&quot;onClickBack&quot;&gt;&#x56DE;&#x5230;&#x4E0A;&#x4E00;&#x9875;&lt;/button&gt;
-    &lt;button @click=&quot;onClickClose&quot;&gt;&#x5173;&#x95ED;&#x5F53;&#x524D;&#x7A97;&#x53E3;&lt;/button&gt;
+    &lt;div class=&quot;content&quot;&gt;page2&lt;/div&gt;
+    &lt;a href=&quot;/a&quot; target=&quot;_blank&quot;&gt;&#x8DF3;&#x8F6C; tabbar &#x9875;&#x9762;&lt;/a&gt;
+    &lt;a href=&quot;/c&quot; target=&quot;_blank&quot;&gt;&#x8DF3;&#x8F6C;&#x666E;&#x901A;&#x9875;&#x9762;&lt;/a&gt;
+    &lt;a href=&quot;/d&quot;&gt;&#x8DF3;&#x8F6C;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x9875;&#x9762;&lt;/a&gt;
     &lt;Footer&gt;&lt;/Footer&gt;
   &lt;/div&gt;
 &lt;/template&gt;
@@ -1041,59 +873,18 @@ a, button {
 &lt;script&gt;
 import Header from &apos;../common/Header.vue&apos;
 import Footer from &apos;../common/Footer.vue&apos;
+
 export default {
   name: &apos;App&apos;,
   components: {
     Header,
-    Footer
-  },
-  data() {
-    return {
-      url: location.href,
-    }
-  },
-  created() {
-    window.addEventListener(&apos;wxload&apos;, query =&gt; console.log(&apos;page3 wxload&apos;, query))
-    window.addEventListener(&apos;wxshow&apos;, () =&gt; console.log(&apos;page3 wxshow&apos;))
-    window.addEventListener(&apos;wxready&apos;, () =&gt; console.log(&apos;page3 wxready&apos;))
-    window.addEventListener(&apos;wxhide&apos;, () =&gt; console.log(&apos;page3 wxhide&apos;))
-    window.addEventListener(&apos;wxunload&apos;, () =&gt; console.log(&apos;page3 wxunload&apos;))
-    window.onShareAppMessage = () =&gt; {
-      return {
-        title: &apos;kbone-demo&apos;,
-        path: &apos;/a&apos;,
-      }
-    }
-  },
-  methods: {
-    onClickBack() {
-      if (process.env.isMiniprogram) {
-        wx.navigateBack()
-      }
-    },
-    onClickClose() {
-      window.close()
-    },
+    Footer,
   },
 }
 &lt;/script&gt;
-
-&lt;style&gt;
-.cnt {
-  margin-top: 20px;
-}
-a, button {
-  display: block;
-  width: 100%;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  font-size: 20px;
-  border: 1px solid #ddd;
-}
-&lt;/style&gt;
 </code></pre>
-<p><code>/src/page3/main.mp.js</code> &#x5185;&#x5BB9;&#xFF1A;</p>
+<h4 id="25-&#x521B;&#x5EFA;-page3-&#x7EC4;&#x4EF6;"><a name="25-&#x521B;&#x5EFA;-page3-&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#25-&#x521B;&#x5EFA;-page3-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="25-&#x521B;&#x5EFA;-page3-&#x7EC4;&#x4EF6;" class="plugin-anchor" href="#25-&#x521B;&#x5EFA;-page3-&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5 &#x521B;&#x5EFA; page3 &#x7EC4;&#x4EF6;</h4>
+<p>&#x5728; <code>/src/</code> &#x4E0B;&#x521B;&#x5EFA; <code>page3</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x521B;&#x5EFA; <code>main.mp.js</code> &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> Vue <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;vue&apos;</span>
 <span class="hljs-keyword">import</span> App <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./App.vue&apos;</span>
 
@@ -1108,10 +899,51 @@ a, button {
   })
 }
 </code></pre>
-<h4 id="24-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;"><a name="24-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;" class="anchor-navigation-ex-anchor" href="#24-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="24-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;" class="plugin-anchor" href="#24-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 &#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;</h4>
+<p>&#x5728; <code>/src/page3</code> &#x4E0B;&#x521B;&#x5EFA; <code>App.vue</code> &#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-vue">&lt;template&gt;
+  &lt;div class=&quot;cnt&quot;&gt;
+    &lt;Header&gt;&lt;/Header&gt;
+    &lt;div class=&quot;content&quot;&gt;page3&lt;/div&gt;
+    &lt;a href=&quot;/a&quot;&gt;&#x8DF3;&#x8F6C; tabbar &#x9875;&#x9762;&lt;/a&gt;
+    &lt;a href=&quot;/d&quot; target=&quot;_blank&quot;&gt;&#x8DF3;&#x8F6C;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x9875;&#x9762;&lt;/a&gt;
+    &lt;Footer&gt;&lt;/Footer&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Header from &apos;../common/Header.vue&apos;
+import Footer from &apos;../common/Footer.vue&apos;
+
+export default {
+  name: &apos;App&apos;,
+  components: {
+    Header,
+    Footer,
+  },
+}
+&lt;/script&gt;
+
+&lt;style&gt;
+.cnt {
+  margin-top: 20px;
+}
+
+a, .content {
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #ddd;
+}
+&lt;/style&gt;
+</code></pre>
+<h4 id="26-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;"><a name="26-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;" class="anchor-navigation-ex-anchor" href="#26-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="26-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;" class="plugin-anchor" href="#26-&#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a>2.6 &#x5C0F;&#x7A0B;&#x5E8F;&#x7AEF;&#x6548;&#x679C;&#x9884;&#x89C8;</h4>
 <pre><code>npm run mp
-</code></pre><p><img src="images/c.png" width="400">
-<img src="images/c.gif" width="400"></p>
+</code></pre><p><img src="images/Snip20200428_2.png" width="300">
+<img src="images/Snip20200428_3.png" width="300">
+<img src="images/Snip20200428_4.png" width="300"></p>
 
                                 
                                 </section>
@@ -1139,12 +971,12 @@ a, button {
 
             
                 
-                <a href="01-环境判断.html" class="navigation navigation-prev " aria-label="Previous page: 01-环境判断">
+                <a href="11-echarts.html" class="navigation navigation-prev " aria-label="Previous page: 11-kbone+canvas">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="03-使用小程序内置组件.html" class="navigation navigation-next " aria-label="Next page: 03-使用小程序内置组件">
+                <a href="13-subpackages.html" class="navigation navigation-next " aria-label="Next page: 13-subpackages">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1155,7 +987,7 @@ a, button {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"02-多页开发","level":"1.3.2","depth":2,"next":{"title":"03-使用小程序内置组件","level":"1.3.3","depth":2,"path":"advanced/03-使用小程序内置组件.md","ref":"./advanced/03-使用小程序内置组件.md","articles":[]},"previous":{"title":"01-环境判断","level":"1.3.1","depth":2,"path":"advanced/01-环境判断.md","ref":"./advanced/01-环境判断.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex","favicon","insert-logo"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/lurongtao/felixbooks-kbone"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"lurongtao","repo":"felixbooks-kbone","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"url":"/felixbooks-kbone/images/logo-kbone.png","style":"background: skyblue; width: 100%; height: 100%;"}},"theme":"default","author":"古艺散人","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"千锋大前端小册-Electron","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"Electron 入门与实战"},"file":{"path":"advanced/02-多页开发.md","mtime":"2020-04-17T07:10:16.920Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-29T08:44:39.794Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"12-vue+tabbar","level":"1.3.12","depth":2,"next":{"title":"13-subpackages","level":"1.3.13","depth":2,"path":"advanced/13-subpackages.md","ref":"./advanced/13-subpackages.md","articles":[]},"previous":{"title":"11-kbone+canvas","level":"1.3.11","depth":2,"path":"advanced/11-echarts.md","ref":"./advanced/11-echarts.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex","favicon","insert-logo"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/lurongtao/felixbooks-kbone"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"lurongtao","repo":"felixbooks-kbone","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"url":"/felixbooks-kbone/images/logo-kbone.png","style":"background: skyblue; width: 100%; height: 100%;"}},"theme":"default","author":"古艺散人","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"千锋大前端小册-Electron","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"Electron 入门与实战"},"file":{"path":"advanced/12-vue+tabbar.md","mtime":"2020-04-28T09:33:57.032Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-29T08:44:39.794Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
